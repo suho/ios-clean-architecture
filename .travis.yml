@@ -4,7 +4,6 @@ cache:
   bundler: true
   cocoapods: true
   directories:
-    - ~/.rbenv
     - ~/.cocoapods
     - .bundle
     - vendor
