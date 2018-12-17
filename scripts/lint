@@ -1,12 +1,10 @@
 #!/bin/bash
 
-./Pods/SwiftLint/swiftlint lint --reporter json > swiftlint-report.json || false
-
 echo "TRAVIS_REPO_SLUG = $TRAVIS_REPO_SLUG"
 echo "TRAVIS_PULL_REQUEST = $TRAVIS_PULL_REQUEST"
 
-if [[ -z "$TRAVIS_PULL_REQUEST" ]]; then
-    echo 'Not in a Pull Request'
-else
-    bundle exec linterbot "$TRAVIS_REPO_SLUG" "$TRAVIS_PULL_REQUEST" < swiftlint-report.json
+if [ "$TRAVIS_PULL_REQUEST" != "false" ]
+then
+  ./Pods/SwiftLint/swiftlint --reporter json > swiftlint-report.json || false
+  bundle exec linterbot $TRAVIS_REPO_SLUG $TRAVIS_PULL_REQUEST < swiftlint-report.json
 fi

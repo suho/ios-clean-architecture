@@ -1,8 +1,13 @@
 language: objective-c
 osx_image: xcode10.1
 cache:
-  - bundler
-  - cocoapods
+  bundler: true
+  cocoapods: true
+  directories:
+    - ~/.rbenv
+    - ~/.cocoapods
+    - .bundle
+    - vendor
 install:
   - set -o pipefail
   - sudo systemsetup -settimezone Asia/Ho_Chi_Minh
