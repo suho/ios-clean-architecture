@@ -20,6 +20,4 @@ platform :ios do
   lane :test do
     scan
   end
-
-
 end
