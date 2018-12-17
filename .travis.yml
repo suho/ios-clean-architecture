@@ -1,0 +1,13 @@
+language: objective-c
+osx_image: xcode10.1
+cache:
+  - bundler
+  - cocoapods
+install:
+  - set -o pipefail
+  - sudo systemsetup -settimezone Asia/Ho_Chi_Minh
+  - bundle install --path=vendor/bundle --jobs 4 --retry 3
+script:
+  - bundle exec pod install --repo-update
+  - ./scripts/lint 
+  - bundle exec fastlane test  

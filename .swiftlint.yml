@@ -1,0 +1,107 @@
+reporter: xcode
+opt_in_rules:
+  - force_unwrapping
+  - empty_count
+  - vertical_whitespace
+excluded:
+  - Carthage
+  - Pods
+  - vendor
+  - fastlane
+private_outlet:
+  allow_private_set: true
+force_unwrapping: error
+line_length: 150
+custom_rules:
+  disable:
+    name: "Disable Rule In Code"
+    regex: "(swiftlint:disable)"
+    message: "Please do not disable rule in code. "
+    severity: error
+    match_kinds: comment
+  delegate:
+    name: "delegate"
+    regex: '(\s{2,}var\s+delegate)'
+    message: "Please use `weak` for `delegate`. "
+    severity: error
+  comments_space:
+    name: "Space After Comment"
+    regex: '(^ *//\w+)'
+    message: "There should be a space after //"
+    severity: warning
+    match_kinds: comment
+  multiple_empty_lines:
+    name: "Multiple Empty Lines"
+    regex: '((?: *\n){3,})'
+    message: "There are too many line breaks"
+    severity: warning
+  empty_line:
+    name: "Empty Line"
+    regex: '(\}\n +( |class|static|dynamic|@objc|@IBAction|override|private|public|internal){0,}func)'
+    message: "Must have an empty line between functions. "
+    severity: warning
+  extension_mark:
+    name: "Extension Mark"
+    regex: '(\}\n\nextension)'
+    message: "Must have `// MARK:` before extension. "
+    severity: warning
+  switch_enum:
+    name: "Switch Enum"
+    regex: '(case\s\w+\.+rawValue:)'
+    message: "Don't use enum.rawValue in switch-case. Please convert value to enum first. "
+    severity: error
+  compile_lookup:
+    name: "Compile Lookup"
+    regex: '((var|let)\s+\w+\s*=\s*\[)'
+    message: "You need to give types to the array and dictionary. "
+    severity: error
+  weak_self_usage:
+    name: "Weak Self Usage"
+    regex: '(self\?\.)'
+    message: "Explicitly extending lifetime is preferred to optional binding. Ex: `guard let this = self else { return }`. "
+    severity: error
+  weak_self_binding:
+    name: "Weak Self Binding"
+    regex: '(let\s+(?!this)\w+\s*=\s*self[,\s])'
+    message: "Please use `let this = self` instead. "
+    severity: error
+  unowned:
+    name: "Unowned"
+    regex: "(unowned)"
+    message: "Please use `weak` instead. "
+    severity: error
+  empty_string:
+    name: "Empty String"
+    regex: '((!\w+.isNotEmpty)|(length == 0))'
+    message: "Please use `isEmpty` instead. "
+    severity: error
+  not_empty_string:
+    name: "Not Empty String"
+    regex: '((!\w+.isEmpty)|(length (!=|>) 0))'
+    message: "Please use `isNotEmpty` instead. "
+    severity: error
+  bracket:
+    name: "Bracket"
+    regex: '(\}\n{2,}\}|\{\n{2,}\{)'
+    message: "No empty line between two open or close brackets. "
+    severity: warning
+  query_string:
+    name: "Query String"
+    regex: '( [=!><]+ \\\(.*\))'
+    message: "Do not use the string interpolation syntax for query string. "
+    severity: warning
+  append_array:
+   name: "Append array"
+   regex: '(\+ \[.*\].*)'
+   message: "Do not use + for array, should use `append` instead"
+   severity: warning
+  optional_checking:
+   name: "Optional checking"
+   regex: '(\?\?.+)'
+   message: "You should use `if let` or `guard let` or `if else` instead"
+   severity: warning
+  conditional:
+   name: "Condition statement"
+   regex: '( \? .+ : )'
+   message: "Should use if else instead"
+   severity: warning
