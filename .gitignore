@@ -72,3 +72,6 @@ fastlane/test_output
 
 # Bundler
 vendor
+
+# Swiftlint
+swiftlint-report.json
