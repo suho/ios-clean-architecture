@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SigninViewController" customModule="CleanArchitecture" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="rPS-V1-sde" id="E6C-nc-UJk"/>
+                <outlet property="label" destination="hRh-FX-Upj" id="oWc-r6-M64"/>
+                <outlet property="textField" destination="wAY-mK-CBH" id="hWV-39-H8U"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github-logo" translatesAutoresizingMaskIntoConstraints="NO" id="2am-ZY-wCS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L22-nf-LO6">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6j8-Vw-IkX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="extraLight"/>
+                </visualEffectView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to use this app?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-FX-Upj">
+                    <rect key="frame" x="16" y="170" width="343" height="26.5"/>
+                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="23"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input your personal access tokens" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wAY-mK-CBH">
+                    <rect key="frame" x="16" y="246.5" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPS-V1-sde">
+                    <rect key="frame" x="122.5" y="284.5" width="130" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="Create access token?"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hRh-FX-Upj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="1Af-nV-LoA"/>
+                <constraint firstItem="hRh-FX-Upj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="FeS-0t-6Mt"/>
+                <constraint firstItem="wAY-mK-CBH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="HwI-84-d9E"/>
+                <constraint firstItem="wAY-mK-CBH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ij4-hd-ciI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2am-ZY-wCS" secondAttribute="trailing" id="KRL-WF-Wk0"/>
+                <constraint firstItem="rPS-V1-sde" firstAttribute="centerX" secondItem="wAY-mK-CBH" secondAttribute="centerX" id="M39-re-9L7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L22-nf-LO6" secondAttribute="trailing" id="WlU-GC-0xG"/>
+                <constraint firstItem="rPS-V1-sde" firstAttribute="top" secondItem="wAY-mK-CBH" secondAttribute="bottom" constant="8" id="Z1R-Vo-JR8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="L22-nf-LO6" secondAttribute="bottom" id="ZwJ-Bw-4ph"/>
+                <constraint firstItem="L22-nf-LO6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="beZ-Wk-kcJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wAY-mK-CBH" secondAttribute="trailing" constant="16" id="fJv-wa-htw"/>
+                <constraint firstItem="2am-ZY-wCS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fjf-IT-GoZ"/>
+                <constraint firstItem="L22-nf-LO6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gMc-xx-mcP"/>
+                <constraint firstItem="wAY-mK-CBH" firstAttribute="top" secondItem="hRh-FX-Upj" secondAttribute="bottom" constant="50" id="ggr-Mu-xIO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2am-ZY-wCS" secondAttribute="bottom" id="iFM-jt-DE1"/>
+                <constraint firstItem="hRh-FX-Upj" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qyB-lB-Y13"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hRh-FX-Upj" secondAttribute="trailing" constant="16" id="wrA-mN-dpl"/>
+                <constraint firstItem="2am-ZY-wCS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yIV-yM-g2p"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-354" y="152"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="github-logo" width="1200" height="1200"/>
+    </resources>
+</document>

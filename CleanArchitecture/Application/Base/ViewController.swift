@@ -13,10 +13,17 @@ class ViewController: UIViewController {
 
     let bag: DisposeBag = DisposeBag()
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
+        setupUI()
     }
 
     func bindViewModel() {}
+
+    func setupUI() {}
 }

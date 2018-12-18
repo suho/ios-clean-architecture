@@ -9,16 +9,20 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    static let shared: AppDelegate = {
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else { fatalError() }
+        return delegate
+    }()
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        if let window = window {
-            Application.shared.tabbar(in: window)
-            window.makeKeyAndVisible()
-        }
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        Application.shared.auth(in: window)
+        window.makeKeyAndVisible()
+        self.window = window
         return true
     }
 }

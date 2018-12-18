@@ -1,5 +1,5 @@
 //
-//  ListsNavigator.swift
+//  AuthNavigator.swift
 //  CleanArchitecture
 //
 //  Created by Su Ho V. on 12/16/18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-private protocol Navigator {
-    func showLists()
+protocol AuthCoordinate {
+    func showSignin()
 }
 
-final class ListsNavigator: Navigator {
+final class AuthNavigator: AuthCoordinate {
 
     private let navigationController: UINavigationController
 
@@ -21,8 +21,9 @@ final class ListsNavigator: Navigator {
         self.navigationController = navigationController
     }
 
-    func showLists() {
-        let controller = ListsViewController()
+    func showSignin() {
+        let controller = SigninViewController()
+        controller.viewModel = SigninViewModel(useCase: NetworkProvider.current.authNetwork())
         navigationController.pushViewController(controller, animated: true)
     }
 }

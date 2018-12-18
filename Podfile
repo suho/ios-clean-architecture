@@ -26,7 +26,10 @@ end
 def test_pods
   pod 'RxTest'
   pod 'RxBlocking'
-  pod 'Nimble'
+end
+
+def util_pods
+    pod 'Kingfisher'
 end
 
 target 'CleanArchitecture' do
@@ -36,6 +39,7 @@ target 'CleanArchitecture' do
   network_pods
   database_pods
   dev_pods
+  util_pods
 
   target 'CleanArchitectureTests' do
     inherit! :search_paths
@@ -43,12 +47,4 @@ target 'CleanArchitecture' do
     dev_pods
     test_pods
   end
-
-  target 'CleanArchitectureUITests' do
-    inherit! :search_paths
-    rx_swift
-    dev_pods
-    test_pods
-  end
-
 end

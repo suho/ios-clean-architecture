@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.8.0)
-  - Nimble (7.3.1)
+  - Kingfisher (4.10.1)
   - Realm (3.12.0):
     - Realm/Headers (= 3.12.0)
   - Realm/Headers (3.12.0)
@@ -28,7 +28,7 @@ PODS:
   - SwiftLint (0.29.1)
 
 DEPENDENCIES:
-  - Nimble
+  - Kingfisher
   - Realm
   - RealmSwift
   - RxAlamofire
@@ -42,7 +42,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - Nimble
+    - Kingfisher
     - Realm
     - RealmSwift
     - RxAlamofire
@@ -56,7 +56,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
   RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
   RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
@@ -68,6 +68,6 @@ SPEC CHECKSUMS:
   RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
   SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
 
-PODFILE CHECKSUM: 651d0372f63030ef1634f3433bf3a1bd3672fd51
+PODFILE CHECKSUM: 4c78c5383ea468f9132c2ca075ea890ee9e7967f
 
 COCOAPODS: 1.5.3

@@ -9,7 +9,7 @@
 import XCTest
 @testable import CleanArchitecture
 
-class CleanArchitectureTests: XCTestCase {
+final class CleanArchitectureTests: XCTestCase {
 
     func testExample() {}
 }
