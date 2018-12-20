@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import SafariServices
 
 protocol SigninCoordinate {
     func showSignin()
     func showHome()
+    func presentCreateTokenWeb()
 }
 
 final class SigninNavigator: Coordinate, SigninCoordinate {
@@ -20,6 +22,18 @@ final class SigninNavigator: Coordinate, SigninCoordinate {
     @discardableResult
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+    }
+
+    func showHome() {
+        Application.shared.home()
+    }
+
+    func presentCreateTokenWeb() {
+        let urlString = "https://github.com/settings/tokens"
+        if let url = URL(string: urlString) {
+            let controller = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+            navigationController.present(controller, animated: true)
+        }
     }
 
     func showSignin() {
@@ -38,9 +52,5 @@ final class SigninNavigator: Coordinate, SigninCoordinate {
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         navigationController.present(alert, animated: true, completion: nil)
-    }
-
-    func showHome() {
-        Application.shared.home()
     }
 }

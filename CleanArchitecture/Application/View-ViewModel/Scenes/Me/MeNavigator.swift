@@ -23,7 +23,7 @@ final class MeNavigator: Coordinate, MeCoordinate {
 
     func showProfile() {
         let controller = MeViewController()
-        controller.viewModel = MeViewModel(navigator: self)
+        controller.viewModel = MeViewModel(navigator: self, userUseCase: NetworkProvider.current.user())
         navigationController.pushViewController(controller, animated: true)
     }
 

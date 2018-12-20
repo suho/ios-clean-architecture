@@ -54,6 +54,9 @@
 		43682B3121C6AEF800716C2C /* SigninNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3021C6AEF800716C2C /* SigninNavigator.swift */; };
 		43682B3921C6B28B00716C2C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3821C6B28B00716C2C /* App.swift */; };
 		43682B3C21C6B38B00716C2C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3B21C6B38B00716C2C /* String.swift */; };
+		439809ED21CB9DF100E05C14 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809EB21CB9DF100E05C14 /* UserTarget.swift */; };
+		439809EE21CB9DF100E05C14 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809EC21CB9DF100E05C14 /* UserNetwork.swift */; };
+		439809F121CB9E7700E05C14 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809F021CB9E7700E05C14 /* UserUseCase.swift */; };
 		43E16B6921CB480D004785C7 /* RealmSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B6821CB480D004785C7 /* RealmSecurity.swift */; };
 		43E16B6B21CB4E27004785C7 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B6A21CB4E27004785C7 /* Session.swift */; };
 		43E16B6E21CB6630004785C7 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B6D21CB6630004785C7 /* UserDefaults.swift */; };
@@ -130,6 +133,9 @@
 		43682B3021C6AEF800716C2C /* SigninNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninNavigator.swift; sourceTree = "<group>"; };
 		43682B3821C6B28B00716C2C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		43682B3B21C6B38B00716C2C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		439809EB21CB9DF100E05C14 /* UserTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTarget.swift; sourceTree = "<group>"; };
+		439809EC21CB9DF100E05C14 /* UserNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
+		439809F021CB9E7700E05C14 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		43E16B6821CB480D004785C7 /* RealmSecurity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSecurity.swift; sourceTree = "<group>"; };
 		43E16B6A21CB4E27004785C7 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		43E16B6D21CB6630004785C7 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
@@ -277,7 +283,8 @@
 		433BCAFF21C80F7A0098DCF8 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				433BCB1521C92B460098DCF8 /* Auth */,
+				433BCB1121C929460098DCF8 /* AuthUseCase.swift */,
+				439809F021CB9E7700E05C14 /* UserUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -288,14 +295,6 @@
 				433BCB0B21C8F7D80098DCF8 /* GradientView.swift */,
 			);
 			path = GradientView;
-			sourceTree = "<group>";
-		};
-		433BCB1521C92B460098DCF8 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				433BCB1121C929460098DCF8 /* AuthUseCase.swift */,
-			);
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		433BCB1621C92BB10098DCF8 /* Signin */ = {
@@ -473,6 +472,7 @@
 		43682B4021C7596300716C2C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				439809E621CB9DB900E05C14 /* User */,
 				433BCB1D21C92CA10098DCF8 /* Auth */,
 				433BCAD521C7F0000098DCF8 /* Core */,
 				433BCAEE21C7F3EA0098DCF8 /* NetworkProvider.swift */,
@@ -490,6 +490,15 @@
 				4307934821CA0538003C5BF0 /* Entities */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		439809E621CB9DB900E05C14 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				439809EC21CB9DF100E05C14 /* UserNetwork.swift */,
+				439809EB21CB9DF100E05C14 /* UserTarget.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		43E16B6F21CB69F2004785C7 /* Me */ = {
@@ -800,6 +809,7 @@
 				4307935921CA1258003C5BF0 /* RealmProvider.swift in Sources */,
 				4307936921CA79ED003C5BF0 /* Keychain.swift in Sources */,
 				43E16B7521CB6A13004785C7 /* MeViewModel.swift in Sources */,
+				439809ED21CB9DF100E05C14 /* UserTarget.swift in Sources */,
 				433BCB1221C929460098DCF8 /* AuthUseCase.swift in Sources */,
 				4307933F21C9D7D7003C5BF0 /* UIImageView+Rx.swift in Sources */,
 				4307934721C9ECB5003C5BF0 /* RxIndicator+Rx.swift in Sources */,
@@ -810,8 +820,10 @@
 				433BCADE21C7F0000098DCF8 /* Router.swift in Sources */,
 				433BCB0C21C8F7D80098DCF8 /* GradientView.swift in Sources */,
 				4353C67E21C6A3F100A824DD /* AppDelegate.swift in Sources */,
+				439809F121CB9E7700E05C14 /* UserUseCase.swift in Sources */,
 				433BCB1C21C92BD40098DCF8 /* SigninViewModel.swift in Sources */,
 				433BCADF21C7F0000098DCF8 /* Task.swift in Sources */,
+				439809EE21CB9DF100E05C14 /* UserNetwork.swift in Sources */,
 				43E16B8021CB8E7A004785C7 /* SplashNavigator.swift in Sources */,
 				433BCB1021C928FB0098DCF8 /* Credential.swift in Sources */,
 				43E16B6B21CB4E27004785C7 /* Session.swift in Sources */,

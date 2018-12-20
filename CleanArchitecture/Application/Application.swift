@@ -23,9 +23,7 @@ final class Application {
     }
 
     func home() {
-        guard let window = AppDelegate.shared.window else {
-            return
-        }
+        guard let window = AppDelegate.shared.window else { return }
         if userDefaults[.didLogin] {
             profile(in: window)
         } else {

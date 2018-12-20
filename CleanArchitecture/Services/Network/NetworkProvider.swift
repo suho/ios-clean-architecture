@@ -15,4 +15,8 @@ final class NetworkProvider {
     func auth() -> AuthUseCase {
         return AuthNetwork(router: Router<AuthTarget>())
     }
+
+    func user() -> UserUseCase {
+        return UserNetwork(router: Router<UserTarget>())
+    }
 }

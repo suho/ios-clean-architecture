@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import RxCocoa
 
 final class MeViewController: ViewController {
+
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var bioLabel: UILabel!
 
     var viewModel: MeViewModel!
 
     override func setupUI() {
         super.setupUI()
-        title = "Profile"
+        navigationController?.isNavigationBarHidden = true
+    }
+
+    override func bindViewModel() {
+        super.bindViewModel()
+        let output = viewModel.transform(input: MeViewModel.Input())
+        output.avatar.drive(avatarImageView.rx.url).disposed(by: bag)
+        output.bio.drive(bioLabel.rx.text).disposed(by: bag)
+        output.error.drive().disposed(by: bag)
     }
 }

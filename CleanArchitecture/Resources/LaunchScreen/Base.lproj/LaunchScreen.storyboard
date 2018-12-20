@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github-logo" translatesAutoresizingMaskIntoConstraints="NO" id="zCZ-gD-cCY">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -27,7 +27,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zCZ-gD-cCY" secondAttribute="bottom" id="SUY-7g-z0h"/>
                             <constraint firstItem="zCZ-gD-cCY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yvz-o3-Dt9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zCZ-gD-cCY" secondAttribute="trailing" id="i3w-hn-EoF"/>
-                            <constraint firstItem="zCZ-gD-cCY" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="zYI-ph-fid"/>
+                            <constraint firstItem="zCZ-gD-cCY" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="zYI-ph-fid"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

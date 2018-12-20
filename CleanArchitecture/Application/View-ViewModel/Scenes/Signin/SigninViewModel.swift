@@ -14,6 +14,7 @@ final class SigninViewModel: ViewModel {
     struct Input {
         let token: Driver<String>
         let done: Driver<Void>
+        let webButton: Driver<Void>
     }
 
     struct Output {
@@ -57,7 +58,7 @@ final class SigninViewModel: ViewModel {
                         return (cred, user)
                     })
             })
-            .do(onNext: { (credential, user) in
+            .do(onNext: { (credential, _) in
                 Session.current.token = credential.uid
                 userDefaults[.didLogin] = true
                 self.navigator.showHome()
@@ -68,6 +69,10 @@ final class SigninViewModel: ViewModel {
             .do(onNext: { (error) in
                 self.navigator.showError(error)
             })
+        _ = input.webButton
+            .do(onNext: { _ in
+                self.navigator.presentCreateTokenWeb()
+            }).drive()
         return Output(signin: signin,
                       error: error)
     }
