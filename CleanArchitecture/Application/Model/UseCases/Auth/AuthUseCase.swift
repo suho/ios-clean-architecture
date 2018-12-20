@@ -12,3 +12,15 @@ import RxSwift
 protocol AuthUseCase {
     func user(credential: Credential) -> Observable<User>
 }
+
+protocol CredentialUseCase {
+    func save(credential: Credential) -> Observable<Credential>
+    func fetch() -> Observable<Credential?>
+    func clear(credential: Credential) -> Observable<Void>
+}
+
+protocol KeychainUseCase {
+    func save(account: String, password: String) -> Observable<Void>
+    func update(for account: String, with password: String) -> Observable<Void>
+    func getPassword(of account: String) -> Observable<String>
+}

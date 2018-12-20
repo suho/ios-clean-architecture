@@ -30,6 +30,7 @@ end
 
 def util_pods
     pod 'Kingfisher'
+    pod 'SVProgressHUD'
 end
 
 target 'CleanArchitecture' do

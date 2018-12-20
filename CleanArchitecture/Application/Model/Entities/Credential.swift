@@ -9,15 +9,9 @@
 import Foundation
 
 final class Credential {
-    var token: String = ""
+    var uid: String
 
-    init() {}
-
-    init(token: String) {
-        self.token = token
-    }
-
-    func clear() {
-        token = ""
+    init(uid: String) {
+        self.uid = uid
     }
 }

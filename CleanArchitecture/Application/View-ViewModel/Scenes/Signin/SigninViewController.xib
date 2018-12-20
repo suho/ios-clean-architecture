@@ -14,7 +14,7 @@
             <connections>
                 <outlet property="button" destination="rPS-V1-sde" id="E6C-nc-UJk"/>
                 <outlet property="label" destination="hRh-FX-Upj" id="oWc-r6-M64"/>
-                <outlet property="textField" destination="wAY-mK-CBH" id="hWV-39-H8U"/>
+                <outlet property="tokenTextField" destination="wAY-mK-CBH" id="ljb-W4-fgi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -55,6 +55,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hRh-FX-Upj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="1Af-nV-LoA"/>
+                <constraint firstItem="wAY-mK-CBH" firstAttribute="top" secondItem="hRh-FX-Upj" secondAttribute="bottom" constant="50" id="DHI-Ju-o0T"/>
                 <constraint firstItem="hRh-FX-Upj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="FeS-0t-6Mt"/>
                 <constraint firstItem="wAY-mK-CBH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="HwI-84-d9E"/>
                 <constraint firstItem="wAY-mK-CBH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ij4-hd-ciI"/>
@@ -67,7 +68,6 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wAY-mK-CBH" secondAttribute="trailing" constant="16" id="fJv-wa-htw"/>
                 <constraint firstItem="2am-ZY-wCS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fjf-IT-GoZ"/>
                 <constraint firstItem="L22-nf-LO6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gMc-xx-mcP"/>
-                <constraint firstItem="wAY-mK-CBH" firstAttribute="top" secondItem="hRh-FX-Upj" secondAttribute="bottom" constant="50" id="ggr-Mu-xIO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2am-ZY-wCS" secondAttribute="bottom" id="iFM-jt-DE1"/>
                 <constraint firstItem="hRh-FX-Upj" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qyB-lB-Y13"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hRh-FX-Upj" secondAttribute="trailing" constant="16" id="wrA-mN-dpl"/>

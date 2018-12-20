@@ -43,7 +43,7 @@ extension AuthTarget: TargetType {
     var headers: HTTPHeaders? {
         switch self {
         case .user(let credential):
-            return ["Authorization": "Token \(credential.token)"]
+            return ["Authorization": "Token \(credential.uid)"]
         }
     }
 }

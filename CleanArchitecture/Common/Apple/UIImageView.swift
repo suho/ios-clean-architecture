@@ -32,14 +32,3 @@ extension UIImageView {
         addMotionEffect(effectGroup)
     }
 }
-
-// MARK: - RxSwift
-extension Reactive where Base: UIImageView {
-
-    /// Bindable sink for `url` property.
-    public var url: Binder<URL?> {
-        return Binder(base) { imageView, url in
-            imageView.kf.setImage(with: url)
-        }
-    }
-}

@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 
 final class AuthNetwork: AuthUseCase {
+
     private let router: Router<AuthTarget>
 
     init(router: Router<AuthTarget>) {

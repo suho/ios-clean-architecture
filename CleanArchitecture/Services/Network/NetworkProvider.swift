@@ -12,7 +12,7 @@ final class NetworkProvider {
 
     static let current: NetworkProvider = NetworkProvider()
 
-    func authNetwork() -> AuthUseCase {
+    func auth() -> AuthUseCase {
         return AuthNetwork(router: Router<AuthTarget>())
     }
 }

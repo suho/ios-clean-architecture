@@ -13,7 +13,7 @@ import SafariServices
 
 final class SigninViewController: ViewController {
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var tokenTextField: UITextField!
     @IBOutlet weak var button: UIButton!
     var viewModel: SigninViewModel!
 
@@ -24,19 +24,11 @@ final class SigninViewController: ViewController {
 
     override func bindViewModel() {
         super.bindViewModel()
-        let done = textField.rx.controlEvent(.editingDidEndOnExit).flatMapLatest { _ in
-            return self.textField.rx.text.orEmpty
-        }.asObservable()
-        let text = textField.rx.text.orEmpty.asObservable()
-        let trigger = done.withLatestFrom(text)
-        let input = SigninViewModel.Input(trigger: trigger)
+        let done = tokenTextField.rx.controlEvent(.editingDidEndOnExit).asObservable().emptyDriverIfError()
+        let tokenText = tokenTextField.rx.text.orEmpty.asObservable().emptyDriverIfError()
+        let input = SigninViewModel.Input(token: tokenText, done: done)
         let output = viewModel.transform(input: input)
-        output.user.asObservable().subscribe { (event) in
-            switch event {
-            case .next(let user):
-                print(user.uid)
-            default: break
-            }
-        }.disposed(by: bag)
+        output.signin.drive().disposed(by: bag)
+        output.error.drive().disposed(by: bag)
     }
 }

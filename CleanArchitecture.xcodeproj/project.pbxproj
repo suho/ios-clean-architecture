@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		37824278A1758B22FE302C2B /* Pods_CleanArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782273A712D21DC25C665C73 /* Pods_CleanArchitectureTests.framework */; };
+		4307933F21C9D7D7003C5BF0 /* UIImageView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307933E21C9D7D7003C5BF0 /* UIImageView+Rx.swift */; };
+		4307934121C9D80D003C5BF0 /* RxError+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934021C9D80D003C5BF0 /* RxError+Rx.swift */; };
+		4307934321C9DA6C003C5BF0 /* Driver+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934221C9DA6C003C5BF0 /* Driver+Rx.swift */; };
+		4307934521C9E393003C5BF0 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934421C9E393003C5BF0 /* Coordinate.swift */; };
+		4307934721C9ECB5003C5BF0 /* RxIndicator+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934621C9ECB5003C5BF0 /* RxIndicator+Rx.swift */; };
+		4307934A21CA0557003C5BF0 /* ModelConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934921CA0557003C5BF0 /* ModelConvertibleType.swift */; };
+		4307934C21CA058F003C5BF0 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934B21CA058F003C5BF0 /* RealmRepresentable.swift */; };
+		4307935421CA0C39003C5BF0 /* RCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307935321CA0C39003C5BF0 /* RCredential.swift */; };
+		4307935621CA0CD3003C5BF0 /* Object+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307935521CA0CD3003C5BF0 /* Object+Realm.swift */; };
+		4307935921CA1258003C5BF0 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307935821CA1258003C5BF0 /* RealmProvider.swift */; };
+		4307935D21CA13A5003C5BF0 /* CredentialRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307935C21CA13A5003C5BF0 /* CredentialRealm.swift */; };
+		4307936021CA1423003C5BF0 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307935F21CA1423003C5BF0 /* RealmRepository.swift */; };
+		4307936221CA653E003C5BF0 /* Rx+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307936121CA653E003C5BF0 /* Rx+Realm.swift */; };
+		4307936621CA78A2003C5BF0 /* EncryptionConfig+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307936521CA78A2003C5BF0 /* EncryptionConfig+Realm.swift */; };
+		4307936921CA79ED003C5BF0 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307936821CA79ED003C5BF0 /* Keychain.swift */; };
 		433BCADC21C7F0000098DCF8 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD721C7F0000098DCF8 /* TargetType.swift */; };
 		433BCADD21C7F0000098DCF8 /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD821C7F0000098DCF8 /* Mapping.swift */; };
 		433BCADE21C7F0000098DCF8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD921C7F0000098DCF8 /* Router.swift */; };
@@ -36,9 +51,20 @@
 		4353C69321C6A3F200A824DD /* CleanArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353C69221C6A3F200A824DD /* CleanArchitectureTests.swift */; };
 		43682B1721C6A93F00716C2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B1621C6A93F00716C2C /* ViewController.swift */; };
 		43682B1A21C6A9B900716C2C /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B1921C6A9B900716C2C /* Application.swift */; };
-		43682B3121C6AEF800716C2C /* AuthNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3021C6AEF800716C2C /* AuthNavigator.swift */; };
+		43682B3121C6AEF800716C2C /* SigninNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3021C6AEF800716C2C /* SigninNavigator.swift */; };
 		43682B3921C6B28B00716C2C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3821C6B28B00716C2C /* App.swift */; };
 		43682B3C21C6B38B00716C2C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3B21C6B38B00716C2C /* String.swift */; };
+		43E16B6921CB480D004785C7 /* RealmSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B6821CB480D004785C7 /* RealmSecurity.swift */; };
+		43E16B6B21CB4E27004785C7 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B6A21CB4E27004785C7 /* Session.swift */; };
+		43E16B6E21CB6630004785C7 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B6D21CB6630004785C7 /* UserDefaults.swift */; };
+		43E16B7221CB6A07004785C7 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B7021CB6A07004785C7 /* MeViewController.swift */; };
+		43E16B7321CB6A07004785C7 /* MeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E16B7121CB6A07004785C7 /* MeViewController.xib */; };
+		43E16B7521CB6A13004785C7 /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B7421CB6A13004785C7 /* MeViewModel.swift */; };
+		43E16B7721CB6A1C004785C7 /* MeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B7621CB6A1C004785C7 /* MeNavigator.swift */; };
+		43E16B7B21CB8E1C004785C7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B7921CB8E1C004785C7 /* SplashViewController.swift */; };
+		43E16B7C21CB8E1C004785C7 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E16B7A21CB8E1C004785C7 /* SplashViewController.xib */; };
+		43E16B7E21CB8E5B004785C7 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B7D21CB8E5B004785C7 /* SplashViewModel.swift */; };
+		43E16B8021CB8E7A004785C7 /* SplashNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B7F21CB8E7A004785C7 /* SplashNavigator.swift */; };
 		956645E2564500EDB3CF387E /* Pods_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02D3B665AE9543DC884C9D2 /* Pods_CleanArchitecture.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +80,21 @@
 
 /* Begin PBXFileReference section */
 		36A681191E9522F67040C5B4 /* Pods_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4307933E21C9D7D7003C5BF0 /* UIImageView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Rx.swift"; sourceTree = "<group>"; };
+		4307934021C9D80D003C5BF0 /* RxError+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxError+Rx.swift"; sourceTree = "<group>"; };
+		4307934221C9DA6C003C5BF0 /* Driver+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Driver+Rx.swift"; sourceTree = "<group>"; };
+		4307934421C9E393003C5BF0 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		4307934621C9ECB5003C5BF0 /* RxIndicator+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxIndicator+Rx.swift"; sourceTree = "<group>"; };
+		4307934921CA0557003C5BF0 /* ModelConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConvertibleType.swift; sourceTree = "<group>"; };
+		4307934B21CA058F003C5BF0 /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		4307935321CA0C39003C5BF0 /* RCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCredential.swift; sourceTree = "<group>"; };
+		4307935521CA0CD3003C5BF0 /* Object+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+Realm.swift"; sourceTree = "<group>"; };
+		4307935821CA1258003C5BF0 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
+		4307935C21CA13A5003C5BF0 /* CredentialRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialRealm.swift; sourceTree = "<group>"; };
+		4307935F21CA1423003C5BF0 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
+		4307936121CA653E003C5BF0 /* Rx+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Realm.swift"; sourceTree = "<group>"; };
+		4307936521CA78A2003C5BF0 /* EncryptionConfig+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncryptionConfig+Realm.swift"; sourceTree = "<group>"; };
+		4307936821CA79ED003C5BF0 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		433BCAD721C7F0000098DCF8 /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		433BCAD821C7F0000098DCF8 /* Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapping.swift; sourceTree = "<group>"; };
 		433BCAD921C7F0000098DCF8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -86,9 +127,20 @@
 		4353C69421C6A3F200A824DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43682B1621C6A93F00716C2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43682B1921C6A9B900716C2C /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		43682B3021C6AEF800716C2C /* AuthNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigator.swift; sourceTree = "<group>"; };
+		43682B3021C6AEF800716C2C /* SigninNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninNavigator.swift; sourceTree = "<group>"; };
 		43682B3821C6B28B00716C2C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		43682B3B21C6B38B00716C2C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		43E16B6821CB480D004785C7 /* RealmSecurity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSecurity.swift; sourceTree = "<group>"; };
+		43E16B6A21CB4E27004785C7 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		43E16B6D21CB6630004785C7 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		43E16B7021CB6A07004785C7 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		43E16B7121CB6A07004785C7 /* MeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeViewController.xib; sourceTree = "<group>"; };
+		43E16B7421CB6A13004785C7 /* MeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewModel.swift; sourceTree = "<group>"; };
+		43E16B7621CB6A1C004785C7 /* MeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeNavigator.swift; sourceTree = "<group>"; };
+		43E16B7921CB8E1C004785C7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		43E16B7A21CB8E1C004785C7 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		43E16B7D21CB8E5B004785C7 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		43E16B7F21CB8E7A004785C7 /* SplashNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashNavigator.swift; sourceTree = "<group>"; };
 		782273A712D21DC25C665C73 /* Pods_CleanArchitectureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitectureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		920C447378C5817458E5AE75 /* Pods-CleanArchitectureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanArchitectureTests/Pods-CleanArchitectureTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A985D34ABB22C9884803DFB1 /* Pods-CleanArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitecture.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,9 +181,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4307933D21C9D7C6003C5BF0 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				4307934221C9DA6C003C5BF0 /* Driver+Rx.swift */,
+				4307934021C9D80D003C5BF0 /* RxError+Rx.swift */,
+				4307934621C9ECB5003C5BF0 /* RxIndicator+Rx.swift */,
+				4307933E21C9D7D7003C5BF0 /* UIImageView+Rx.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		4307934821CA0538003C5BF0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4307935321CA0C39003C5BF0 /* RCredential.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		4307935721CA11E9003C5BF0 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				4307934B21CA058F003C5BF0 /* RealmRepresentable.swift */,
+				4307934921CA0557003C5BF0 /* ModelConvertibleType.swift */,
+				4307935521CA0CD3003C5BF0 /* Object+Realm.swift */,
+				4307936121CA653E003C5BF0 /* Rx+Realm.swift */,
+				4307936521CA78A2003C5BF0 /* EncryptionConfig+Realm.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		4307936321CA75D4003C5BF0 /* Credential */ = {
+			isa = PBXGroup;
+			children = (
+				4307935C21CA13A5003C5BF0 /* CredentialRealm.swift */,
+			);
+			path = Credential;
+			sourceTree = "<group>";
+		};
+		4307936A21CA7F36003C5BF0 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				4307936821CA79ED003C5BF0 /* Keychain.swift */,
+			);
+			path = Apple;
+			sourceTree = "<group>";
+		};
 		433BCAD421C7EDF60098DCF8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				43E16B7821CB8E08004785C7 /* Splash */,
+				43E16B6F21CB69F2004785C7 /* Me */,
 				433BCB1621C92BB10098DCF8 /* Signin */,
 			);
 			path = Scenes;
@@ -145,6 +246,7 @@
 				433BCAD921C7F0000098DCF8 /* Router.swift */,
 				433BCAD721C7F0000098DCF8 /* TargetType.swift */,
 				433BCADA21C7F0000098DCF8 /* Task.swift */,
+				43E16B6A21CB4E27004785C7 /* Session.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -152,13 +254,14 @@
 		433BCAE021C7F06A0098DCF8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				433BCAE221C7F0B50098DCF8 /* Extension */,
-				433BCAE621C7F0B50098DCF8 /* MVVM */,
+				4307935721CA11E9003C5BF0 /* Realm */,
+				4307933D21C9D7C6003C5BF0 /* Rx */,
+				433BCAE221C7F0B50098DCF8 /* Apple */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		433BCAE221C7F0B50098DCF8 /* Extension */ = {
+		433BCAE221C7F0B50098DCF8 /* Apple */ = {
 			isa = PBXGroup;
 			children = (
 				433BCAE321C7F0B50098DCF8 /* JSONDecoder.swift */,
@@ -166,24 +269,9 @@
 				433BCAF921C804FB0098DCF8 /* Dictionary.swift */,
 				433BCAFB21C808B10098DCF8 /* Sequence.swift */,
 				433BCB0821C8F0710098DCF8 /* UIImageView.swift */,
+				43E16B6D21CB6630004785C7 /* UserDefaults.swift */,
 			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		433BCAE621C7F0B50098DCF8 /* MVVM */ = {
-			isa = PBXGroup;
-			children = (
-				433BCAE721C7F0B50098DCF8 /* ViewModel.swift */,
-			);
-			path = MVVM;
-			sourceTree = "<group>";
-		};
-		433BCAF021C7F46A0098DCF8 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				433BCB1D21C92CA10098DCF8 /* Auth */,
-			);
-			path = API;
+			path = Apple;
 			sourceTree = "<group>";
 		};
 		433BCAFF21C80F7A0098DCF8 /* UseCases */ = {
@@ -213,6 +301,7 @@
 		433BCB1621C92BB10098DCF8 /* Signin */ = {
 			isa = PBXGroup;
 			children = (
+				43682B3021C6AEF800716C2C /* SigninNavigator.swift */,
 				433BCB1721C92BC90098DCF8 /* SigninViewController.swift */,
 				433BCB1821C92BC90098DCF8 /* SigninViewController.xib */,
 				433BCB1B21C92BD40098DCF8 /* SigninViewModel.swift */,
@@ -256,6 +345,7 @@
 				433BCAE021C7F06A0098DCF8 /* Common */,
 				43682B0E21C6A8A900716C2C /* Define */,
 				43682B0F21C6A8B600716C2C /* Resources */,
+				43682B3F21C6B48B00716C2C /* Services */,
 				43682B1121C6A8C900716C2C /* Support */,
 			);
 			path = CleanArchitecture;
@@ -276,7 +366,6 @@
 				4353C67D21C6A3F100A824DD /* AppDelegate.swift */,
 				43682B1921C6A9B900716C2C /* Application.swift */,
 				43682B1521C6A93000716C2C /* Base */,
-				43682B2F21C6AC7C00716C2C /* Coordinates */,
 				43682B3A21C6B2E600716C2C /* Model */,
 				43682B1021C6A8BD00716C2C /* View-ViewModel */,
 			);
@@ -346,24 +435,17 @@
 		43682B1521C6A93000716C2C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				433BCAE721C7F0B50098DCF8 /* ViewModel.swift */,
 				43682B1621C6A93F00716C2C /* ViewController.swift */,
+				4307934421C9E393003C5BF0 /* Coordinate.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		43682B2F21C6AC7C00716C2C /* Coordinates */ = {
-			isa = PBXGroup;
-			children = (
-				43682B3021C6AEF800716C2C /* AuthNavigator.swift */,
-			);
-			path = Coordinates;
 			sourceTree = "<group>";
 		};
 		43682B3A21C6B2E600716C2C /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				43682B3D21C6B3D700716C2C /* Entities */,
-				43682B3F21C6B48B00716C2C /* Services */,
 				433BCAFF21C80F7A0098DCF8 /* UseCases */,
 			);
 			path = Model;
@@ -381,6 +463,7 @@
 		43682B3F21C6B48B00716C2C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4307936A21CA7F36003C5BF0 /* Apple */,
 				43682B4121C7596C00716C2C /* Realm */,
 				43682B4021C7596300716C2C /* Network */,
 			);
@@ -390,7 +473,7 @@
 		43682B4021C7596300716C2C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				433BCAF021C7F46A0098DCF8 /* API */,
+				433BCB1D21C92CA10098DCF8 /* Auth */,
 				433BCAD521C7F0000098DCF8 /* Core */,
 				433BCAEE21C7F3EA0098DCF8 /* NetworkProvider.swift */,
 			);
@@ -400,8 +483,35 @@
 		43682B4121C7596C00716C2C /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				4307935821CA1258003C5BF0 /* RealmProvider.swift */,
+				4307935F21CA1423003C5BF0 /* RealmRepository.swift */,
+				43E16B6821CB480D004785C7 /* RealmSecurity.swift */,
+				4307936321CA75D4003C5BF0 /* Credential */,
+				4307934821CA0538003C5BF0 /* Entities */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		43E16B6F21CB69F2004785C7 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				43E16B7621CB6A1C004785C7 /* MeNavigator.swift */,
+				43E16B7021CB6A07004785C7 /* MeViewController.swift */,
+				43E16B7121CB6A07004785C7 /* MeViewController.xib */,
+				43E16B7421CB6A13004785C7 /* MeViewModel.swift */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		43E16B7821CB8E08004785C7 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				43E16B7F21CB8E7A004785C7 /* SplashNavigator.swift */,
+				43E16B7921CB8E1C004785C7 /* SplashViewController.swift */,
+				43E16B7A21CB8E1C004785C7 /* SplashViewController.xib */,
+				43E16B7D21CB8E5B004785C7 /* SplashViewModel.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		51731A29D82242B01C173510 /* Pods */ = {
@@ -505,6 +615,8 @@
 			files = (
 				433BCB1A21C92BC90098DCF8 /* SigninViewController.xib in Resources */,
 				4353C68821C6A3F200A824DD /* LaunchScreen.storyboard in Resources */,
+				43E16B7321CB6A07004785C7 /* MeViewController.xib in Resources */,
+				43E16B7C21CB8E1C004785C7 /* SplashViewController.xib in Resources */,
 				4353C68521C6A3F200A824DD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,6 +711,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -613,6 +726,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -654,23 +768,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4307936621CA78A2003C5BF0 /* EncryptionConfig+Realm.swift in Sources */,
 				433BCB1421C929670098DCF8 /* User.swift in Sources */,
+				43E16B6921CB480D004785C7 /* RealmSecurity.swift in Sources */,
 				433BCAEB21C7F0B50098DCF8 /* ViewModel.swift in Sources */,
+				4307934521C9E393003C5BF0 /* Coordinate.swift in Sources */,
 				433BCADC21C7F0000098DCF8 /* TargetType.swift in Sources */,
 				43682B1A21C6A9B900716C2C /* Application.swift in Sources */,
+				4307935421CA0C39003C5BF0 /* RCredential.swift in Sources */,
+				4307934A21CA0557003C5BF0 /* ModelConvertibleType.swift in Sources */,
+				43E16B7721CB6A1C004785C7 /* MeNavigator.swift in Sources */,
+				4307936221CA653E003C5BF0 /* Rx+Realm.swift in Sources */,
+				43E16B7221CB6A07004785C7 /* MeViewController.swift in Sources */,
 				433BCAEF21C7F3EA0098DCF8 /* NetworkProvider.swift in Sources */,
+				4307936021CA1423003C5BF0 /* RealmRepository.swift in Sources */,
 				433BCB0E21C91FAD0098DCF8 /* Color.swift in Sources */,
 				433BCAFA21C804FB0098DCF8 /* Dictionary.swift in Sources */,
+				4307935D21CA13A5003C5BF0 /* CredentialRealm.swift in Sources */,
 				433BCB1921C92BC90098DCF8 /* SigninViewController.swift in Sources */,
 				43682B3C21C6B38B00716C2C /* String.swift in Sources */,
+				43E16B7B21CB8E1C004785C7 /* SplashViewController.swift in Sources */,
+				4307934C21CA058F003C5BF0 /* RealmRepresentable.swift in Sources */,
 				433BCAE921C7F0B50098DCF8 /* DateFormatter.swift in Sources */,
 				433BCADD21C7F0000098DCF8 /* Mapping.swift in Sources */,
 				433BCAFC21C808B10098DCF8 /* Sequence.swift in Sources */,
 				43682B3921C6B28B00716C2C /* App.swift in Sources */,
+				43E16B7E21CB8E5B004785C7 /* SplashViewModel.swift in Sources */,
 				433BCAE821C7F0B50098DCF8 /* JSONDecoder.swift in Sources */,
 				433BCB1F21C92CAD0098DCF8 /* AuthTarget.swift in Sources */,
+				4307934321C9DA6C003C5BF0 /* Driver+Rx.swift in Sources */,
+				4307935921CA1258003C5BF0 /* RealmProvider.swift in Sources */,
+				4307936921CA79ED003C5BF0 /* Keychain.swift in Sources */,
+				43E16B7521CB6A13004785C7 /* MeViewModel.swift in Sources */,
 				433BCB1221C929460098DCF8 /* AuthUseCase.swift in Sources */,
-				43682B3121C6AEF800716C2C /* AuthNavigator.swift in Sources */,
+				4307933F21C9D7D7003C5BF0 /* UIImageView+Rx.swift in Sources */,
+				4307934721C9ECB5003C5BF0 /* RxIndicator+Rx.swift in Sources */,
+				43682B3121C6AEF800716C2C /* SigninNavigator.swift in Sources */,
+				4307934121C9D80D003C5BF0 /* RxError+Rx.swift in Sources */,
 				433BCB0921C8F0710098DCF8 /* UIImageView.swift in Sources */,
 				43682B1721C6A93F00716C2C /* ViewController.swift in Sources */,
 				433BCADE21C7F0000098DCF8 /* Router.swift in Sources */,
@@ -678,9 +812,13 @@
 				4353C67E21C6A3F100A824DD /* AppDelegate.swift in Sources */,
 				433BCB1C21C92BD40098DCF8 /* SigninViewModel.swift in Sources */,
 				433BCADF21C7F0000098DCF8 /* Task.swift in Sources */,
+				43E16B8021CB8E7A004785C7 /* SplashNavigator.swift in Sources */,
 				433BCB1021C928FB0098DCF8 /* Credential.swift in Sources */,
+				43E16B6B21CB4E27004785C7 /* Session.swift in Sources */,
+				43E16B6E21CB6630004785C7 /* UserDefaults.swift in Sources */,
 				433BCB2121C92E330098DCF8 /* AuthNetwork.swift in Sources */,
 				433BCAED21C7F2CB0098DCF8 /* APIError.swift in Sources */,
+				4307935621CA0CD3003C5BF0 /* Object+Realm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,15 +8,42 @@
 
 import UIKit
 
+let userDefaults = UserDefaults.standard
+
 final class Application {
     static let shared = Application()
 
     private init() {}
 
-    func auth(in window: UIWindow) {
+    func splash(in window: UIWindow) {
         let navi = UINavigationController()
-        let nagigator = AuthNavigator(navigationController: navi)
-        nagigator.showSignin()
+        let navigator = SplashNavigator(navigationController: navi)
+        navigator.showSplash()
+        window.rootViewController = navi
+    }
+
+    func home() {
+        guard let window = AppDelegate.shared.window else {
+            return
+        }
+        if userDefaults[.didLogin] {
+            profile(in: window)
+        } else {
+            auth(in: window)
+        }
+    }
+
+    private func auth(in window: UIWindow) {
+        let navi = UINavigationController()
+        let navigator = SigninNavigator(navigationController: navi)
+        navigator.showSignin()
+        window.rootViewController = navi
+    }
+
+    private func profile(in window: UIWindow) {
+        let navi = UINavigationController()
+        let navigator = MeNavigator(navigationController: navi)
+        navigator.showProfile()
         window.rootViewController = navi
     }
 }

@@ -25,6 +25,7 @@ PODS:
   - RxTest (4.4.0):
     - RxAtomic (~> 4.4)
     - RxSwift (~> 4.0)
+  - SVProgressHUD (2.2.5)
   - SwiftLint (0.29.1)
 
 DEPENDENCIES:
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - RxRealm
   - RxSwift
   - RxTest
+  - SVProgressHUD
   - SwiftLint
 
 SPEC REPOS:
@@ -52,6 +54,7 @@ SPEC REPOS:
     - RxRealm
     - RxSwift
     - RxTest
+    - SVProgressHUD
     - SwiftLint
 
 SPEC CHECKSUMS:
@@ -66,8 +69,9 @@ SPEC CHECKSUMS:
   RxRealm: 5379eddd74f8d617ca7681d1f8d144af25b432b0
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
 
-PODFILE CHECKSUM: 4c78c5383ea468f9132c2ca075ea890ee9e7967f
+PODFILE CHECKSUM: b5fd603b2ba23d06d4e7e9064b0ff99ce4728bbb
 
 COCOAPODS: 1.5.3
