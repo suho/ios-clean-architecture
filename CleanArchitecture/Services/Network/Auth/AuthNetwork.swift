@@ -17,7 +17,7 @@ final class AuthNetwork: AuthUseCase {
         self.router = router
     }
 
-    func user(credential: Credential) -> Observable<User> {
-        return router.request(.user(credential)).map(User.self)
+    func signin(credential: Credential) -> Observable<Void> {
+        return router.request(.signin(credential)).map { _ in return }
     }
 }

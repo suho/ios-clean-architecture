@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 protocol AuthUseCase {
-    func user(credential: Credential) -> Observable<User>
+    func signin(credential: Credential) -> Observable<Void>
 }
 
 protocol CredentialUseCase {

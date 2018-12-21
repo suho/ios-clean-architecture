@@ -19,6 +19,8 @@ final class MeViewController: ViewController {
     override func setupUI() {
         super.setupUI()
         navigationController?.isNavigationBarHidden = true
+        avatarImageView.layer.cornerRadius = 10
+        avatarImageView.layer.masksToBounds = true
     }
 
     override func bindViewModel() {

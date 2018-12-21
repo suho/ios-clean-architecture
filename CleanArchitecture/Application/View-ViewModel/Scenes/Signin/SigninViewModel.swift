@@ -40,25 +40,21 @@ final class SigninViewModel: ViewModel {
         let trigger = input.done.withLatestFrom(input.token)
         let signin: Driver<Void> = trigger
             .map { Credential(uid: $0) }
-            .flatMapLatest { credentail -> Driver<(Credential, User)> in
+            .flatMapLatest { credentail -> Driver<Credential> in
                 return self.authUseCase
-                    .user(credential: credentail)
+                    .signin(credential: credentail)
                     .indicate(indicator)
                     .trackError(into: rxError)
                     .emptyDriverIfError()
-                    .map { user in
-                        return (credentail, user)
-                    }
+                    .map { _ in return credentail }
             }
-            .flatMapLatest({ (credential, user) -> Driver<(Credential, User)> in
+            .flatMapLatest { credential -> Driver<Credential> in
                 return self.credentialUseCase
                     .save(credential: credential)
                     .emptyDriverIfError()
-                    .map({ (cred) in
-                        return (cred, user)
-                    })
-            })
-            .do(onNext: { (credential, _) in
+                    .map { cred in return cred }
+            }
+            .do(onNext: { credential in
                 Session.current.token = credential.uid
                 userDefaults[.didLogin] = true
                 self.navigator.showHome()
@@ -71,7 +67,7 @@ final class SigninViewModel: ViewModel {
             })
         _ = input.webButton
             .do(onNext: { _ in
-                self.navigator.presentCreateTokenWeb()
+                self.navigator.presentWeb()
             }).drive()
         return Output(signin: signin,
                       error: error)

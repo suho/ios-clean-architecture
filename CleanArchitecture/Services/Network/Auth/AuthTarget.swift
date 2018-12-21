@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum AuthTarget {
-    case user(Credential)
+    case signin(Credential)
 }
 
 // MARK: - TargetType
@@ -21,28 +21,28 @@ extension AuthTarget: TargetType {
 
     var path: String {
         switch self {
-        case .user:
+        case .signin:
             return "/user"
         }
     }
 
     var method: HTTPMethod {
         switch self {
-        case .user:
+        case .signin:
             return .get
         }
     }
 
     var task: HTTPTask {
         switch self {
-        case .user:
+        case .signin:
             return .requestPlain
         }
     }
 
     var headers: HTTPHeaders? {
         switch self {
-        case .user(let credential):
+        case .signin(let credential):
             return ["Authorization": "Token \(credential.uid)"]
         }
     }

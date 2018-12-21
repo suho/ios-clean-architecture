@@ -28,7 +28,6 @@ final class GradientView: UIView {
 
     private func setupLayer() {
         guard let layer = layer as? CAGradientLayer else { return }
-
         layer.colors = (0...10)
             .map { CGFloat($0) }
             .map { $0/10 }
