@@ -12,13 +12,14 @@ import RealmSwift
 
 final class RealmProvider {
     private let configuration: Realm.Configuration
+    static let standard = RealmProvider()
 
     init(configuration: Realm.Configuration = Realm.Configuration()) {
         self.configuration = configuration
     }
 
-    func credential() -> CredentialUseCase {
-        let repository = RealmRepository<Credential>(configuration: configuration)
-        return CredentialRealm(repository: repository)
+    func user() -> UserUseCase & UserLocalUseCase {
+        let repository = RealmRepository<User>(configuration: configuration)
+        return UserRealm(repository: repository)
     }
 }

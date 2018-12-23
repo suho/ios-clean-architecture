@@ -43,9 +43,7 @@ extension UserTarget: TargetType {
     var headers: HTTPHeaders? {
         switch self {
         case .user:
-            guard let token = Session.current.token else {
-                return nil
-            }
+            guard let token = Session.current.token else { return nil }
             return ["Authorization": "Token \(token)"]
         }
     }

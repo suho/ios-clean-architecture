@@ -9,6 +9,6 @@
 import Foundation
 
 final class Session {
-    static let current: Session = Session()
+    static let current = Session()
     var token: String?
 }

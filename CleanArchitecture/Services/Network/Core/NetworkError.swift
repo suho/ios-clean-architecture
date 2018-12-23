@@ -1,5 +1,5 @@
 //
-//  APIError.swift
+//  NetworkError.swift
 //  CleanArchitecture
 //
 //  Created by Su Ho V. on 12/17/18.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum APIError: Error {
+enum NetworkError: Error {
     case json
 }

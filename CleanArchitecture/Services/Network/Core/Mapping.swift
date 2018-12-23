@@ -15,8 +15,8 @@ extension Observable where E == Data {
         if let keyPath = keyPath {
             return map { (data) -> T in
                 guard let value = try? JSONSerialization.jsonObject(with: data, options: []),
-                    let json = value as? [String: Any] else { throw APIError.json }
-                guard let dataJSON = json.value(of: keyPath) else { throw APIError.json }
+                    let json = value as? [String: Any] else { throw NetworkError.json }
+                guard let dataJSON = json.value(of: keyPath) else { throw NetworkError.json }
                 let dataFromJSON = try JSONSerialization.data(withJSONObject: dataJSON, options: [])
                 return try JSONDecoder.shared.decode(T.self, from: dataFromJSON)
             }

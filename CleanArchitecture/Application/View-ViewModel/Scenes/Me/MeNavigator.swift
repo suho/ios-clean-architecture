@@ -12,7 +12,7 @@ protocol MeCoordinate {
     func showProfile()
 }
 
-final class MeNavigator: Coordinate, MeCoordinate {
+final class MeNavigator: ErrorCoordinate, MeCoordinate {
 
     private let navigationController: UINavigationController
 
@@ -23,7 +23,10 @@ final class MeNavigator: Coordinate, MeCoordinate {
 
     func showProfile() {
         let controller = MeViewController()
-        controller.viewModel = MeViewModel(navigator: self, userUseCase: NetworkProvider.current.user())
+        let viewModel = MeViewModel(navigator: self,
+                                    networkService: NetworkProvider.current.user(),
+                                    realmService: RealmProvider.standard.user())
+        controller.viewModel = viewModel
         navigationController.pushViewController(controller, animated: true)
     }
 

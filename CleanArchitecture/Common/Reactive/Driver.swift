@@ -15,7 +15,7 @@ extension ObservableType {
         return asDriver { _ in return Driver<E>.empty() }
     }
 
-    func emptyIfError() -> Observable<E> {
+    func emptyObservableIfError() -> Observable<E> {
         return catchError { _ in return Observable<E>.empty() }
     }
 }

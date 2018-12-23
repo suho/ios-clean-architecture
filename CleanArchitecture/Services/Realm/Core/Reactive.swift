@@ -1,5 +1,5 @@
 //
-//  Rx+Realm.swift
+//  Realm+Rx.swift
 //  CleanArchitecture
 //
 //  Created by Su Ho V. on 12/19/18.
@@ -12,7 +12,6 @@ import RealmSwift
 import RxSwift
 
 extension Reactive where Base: Realm {
-
     func save<S: Sequence>(_ objects: S, update: Bool = true) -> Observable<S> where S.Element: RealmRepresentable,
         S.Element.RealmType: Object {
         return Observable.create { observer in

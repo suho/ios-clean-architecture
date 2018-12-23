@@ -31,5 +31,6 @@ final class SigninViewController: ViewController {
         let output = viewModel.transform(input: input)
         output.signin.drive().disposed(by: bag)
         output.error.drive().disposed(by: bag)
+        output.webButton.drive().disposed(by: bag)
     }
 }

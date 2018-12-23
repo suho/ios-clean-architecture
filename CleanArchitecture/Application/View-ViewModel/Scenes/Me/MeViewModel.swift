@@ -8,6 +8,7 @@
 
 import Foundation
 import RxCocoa
+import RxSwift
 
 final class MeViewModel: ViewModel {
     struct Input {}
@@ -18,20 +19,27 @@ final class MeViewModel: ViewModel {
     }
 
     private let navigator: MeNavigator
-    private let userUseCase: UserUseCase
+    private let networkService: UserUseCase
+    private let realmService: UserUseCase & UserLocalUseCase
 
-    init(navigator: MeNavigator, userUseCase: UserUseCase) {
+    init(navigator: MeNavigator, networkService: UserUseCase, realmService: UserUseCase & UserLocalUseCase) {
         self.navigator = navigator
-        self.userUseCase = userUseCase
+        self.networkService = networkService
+        self.realmService = realmService
     }
 
     func transform(input: MeViewModel.Input) -> MeViewModel.Output {
         let rxIndicator = RxIndicator()
         let rxError = RxError()
-        let user = userUseCase.profile()
+        let user: Driver<User> = networkService.profile()
             .indicate(rxIndicator)
             .trackError(into: rxError)
-            .emptyDriverIfError()
+            .flatMapLatest({ user -> Observable<User> in
+                return self.realmService.save(user: user)
+            })
+            .asDriver { _ -> Driver<User> in
+                return self.realmService.profile().emptyDriverIfError()
+            }
         _ = rxError.do(onNext: { (error) in
             self.navigator.showError(error)
         })

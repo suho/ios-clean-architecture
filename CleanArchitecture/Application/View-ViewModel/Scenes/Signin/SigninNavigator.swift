@@ -11,11 +11,11 @@ import SafariServices
 
 protocol SigninCoordinate {
     func showSignin()
-    func showHome()
+    func showProfile()
     func presentWeb()
 }
 
-final class SigninNavigator: Coordinate, SigninCoordinate {
+final class SigninNavigator: ErrorCoordinate, SigninCoordinate {
 
     private let navigationController: UINavigationController
 
@@ -24,8 +24,8 @@ final class SigninNavigator: Coordinate, SigninCoordinate {
         self.navigationController = navigationController
     }
 
-    func showHome() {
-        Application.shared.home()
+    func showProfile() {
+        Application.shared.profile()
     }
 
     func presentWeb() {
@@ -38,11 +38,8 @@ final class SigninNavigator: Coordinate, SigninCoordinate {
 
     func showSignin() {
         let controller = SigninViewController()
-        let credentialUseCase = RealmProvider(configuration: SecurityRealm.configuration)
-            .credential()
         controller.viewModel = SigninViewModel(navigator: self,
-                                               authUseCase: NetworkProvider.current.auth(),
-                                               credentialUseCase: credentialUseCase)
+                                               authService: NetworkProvider.current.auth())
         navigationController.pushViewController(controller, animated: true)
     }
 

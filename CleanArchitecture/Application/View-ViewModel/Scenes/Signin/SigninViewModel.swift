@@ -20,18 +20,15 @@ final class SigninViewModel: ViewModel {
     struct Output {
         let signin: Driver<Void>
         let error: Driver<Error>
+        let webButton: Driver<Void>
     }
 
     private let navigator: SigninNavigator
-    private let authUseCase: AuthUseCase
-    private let credentialUseCase: CredentialUseCase
+    private let authService: AuthUseCase
 
-    init(navigator: SigninNavigator,
-         authUseCase: AuthUseCase,
-         credentialUseCase: CredentialUseCase) {
+    init(navigator: SigninNavigator, authService: AuthUseCase) {
         self.navigator = navigator
-        self.authUseCase = authUseCase
-        self.credentialUseCase = credentialUseCase
+        self.authService = authService
     }
 
     func transform(input: SigninViewModel.Input) -> SigninViewModel.Output {
@@ -39,25 +36,18 @@ final class SigninViewModel: ViewModel {
         let indicator = RxIndicator()
         let trigger = input.done.withLatestFrom(input.token)
         let signin: Driver<Void> = trigger
-            .map { Credential(uid: $0) }
-            .flatMapLatest { credentail -> Driver<Credential> in
-                return self.authUseCase
-                    .signin(credential: credentail)
+            .flatMapLatest { token -> Driver<String> in
+                return self
+                    .authService
+                    .signin(token: token)
                     .indicate(indicator)
                     .trackError(into: rxError)
                     .emptyDriverIfError()
-                    .map { _ in return credentail }
+                    .map { _ in return token }
             }
-            .flatMapLatest { credential -> Driver<Credential> in
-                return self.credentialUseCase
-                    .save(credential: credential)
-                    .emptyDriverIfError()
-                    .map { cred in return cred }
-            }
-            .do(onNext: { credential in
-                Session.current.token = credential.uid
-                userDefaults[.didLogin] = true
-                self.navigator.showHome()
+            .do(onNext: { token in
+                Session.current.token = token
+                self.navigator.showProfile()
             })
             .map { _ in return }
         let error = rxError
@@ -65,11 +55,12 @@ final class SigninViewModel: ViewModel {
             .do(onNext: { (error) in
                 self.navigator.showError(error)
             })
-        _ = input.webButton
+        let webButton = input.webButton
             .do(onNext: { _ in
                 self.navigator.presentWeb()
-            }).drive()
+            })
         return Output(signin: signin,
-                      error: error)
+                      error: error,
+                      webButton: webButton)
     }
 }

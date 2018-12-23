@@ -31,6 +31,15 @@
                                 <constraint firstAttribute="width" secondItem="bfW-p3-LiF" secondAttribute="height" id="4WY-kR-Cwe"/>
                             </constraints>
                         </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yzf-J4-4d0" customClass="GradientView" customModule="CleanArchitecture" customModuleProvider="target">
+                            <rect key="frame" x="62.5" y="396" width="250" height="62.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKA-VP-dRJ">
                             <rect key="frame" x="8" y="466.5" width="359" height="0.0"/>
                             <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
@@ -40,12 +49,16 @@
                     </subviews>
                     <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="Yzf-J4-4d0" firstAttribute="trailing" secondItem="bfW-p3-LiF" secondAttribute="trailing" id="THt-KS-QX6"/>
                         <constraint firstItem="bfW-p3-LiF" firstAttribute="centerY" secondItem="a1f-Yl-KcJ" secondAttribute="centerY" id="XFT-A0-q8k"/>
                         <constraint firstAttribute="trailing" secondItem="cKA-VP-dRJ" secondAttribute="trailing" constant="8" id="Xbu-Fb-L7m"/>
+                        <constraint firstItem="Yzf-J4-4d0" firstAttribute="bottom" secondItem="bfW-p3-LiF" secondAttribute="bottom" id="c2V-Dp-qhr"/>
                         <constraint firstItem="cKA-VP-dRJ" firstAttribute="centerX" secondItem="a1f-Yl-KcJ" secondAttribute="centerX" id="cjH-wr-kgA"/>
                         <constraint firstItem="cKA-VP-dRJ" firstAttribute="leading" secondItem="a1f-Yl-KcJ" secondAttribute="leading" constant="8" id="eZ0-Kg-SLf"/>
                         <constraint firstItem="bfW-p3-LiF" firstAttribute="centerX" secondItem="a1f-Yl-KcJ" secondAttribute="centerX" id="kAW-9f-ek3"/>
                         <constraint firstItem="bfW-p3-LiF" firstAttribute="width" secondItem="a1f-Yl-KcJ" secondAttribute="width" multiplier="2/3" id="mpW-h9-hcP"/>
+                        <constraint firstItem="Yzf-J4-4d0" firstAttribute="leading" secondItem="bfW-p3-LiF" secondAttribute="leading" id="sYo-5y-lYD"/>
+                        <constraint firstItem="Yzf-J4-4d0" firstAttribute="height" secondItem="bfW-p3-LiF" secondAttribute="height" multiplier="1/4" id="t9w-3X-6bS"/>
                         <constraint firstItem="cKA-VP-dRJ" firstAttribute="top" secondItem="bfW-p3-LiF" secondAttribute="bottom" constant="8" id="vJK-mI-KWb"/>
                     </constraints>
                 </view>
@@ -58,7 +71,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a1f-Yl-KcJ" secondAttribute="trailing" id="wTH-ob-pGh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-254" y="47"/>
+            <point key="canvasLocation" x="-255.19999999999999" y="46.326836581709152"/>
         </view>
     </objects>
 </document>

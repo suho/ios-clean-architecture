@@ -12,6 +12,8 @@ private_outlet:
   allow_private_set: true
 force_unwrapping: error
 line_length: 150
+identifier_name: 
+   min_length: 2
 custom_rules:
   disable:
     name: "Disable Rule In Code"

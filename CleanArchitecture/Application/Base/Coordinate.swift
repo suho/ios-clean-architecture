@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-protocol Coordinate {
+protocol ErrorCoordinate {
     func showError(_ error: Error)
 }

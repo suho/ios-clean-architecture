@@ -1,5 +1,5 @@
 //
-//  Object+Realm.swift
+//  Object.swift
 //  CleanArchitecture
 //
 //  Created by Su Ho V. on 12/19/18.

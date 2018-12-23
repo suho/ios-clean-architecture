@@ -10,8 +10,8 @@ import Foundation
 
 protocol RealmRepresentable {
     associatedtype RealmType: ModelConvertibleType
-
-    var uid: String { get }
+    associatedtype KeyType
+    var uid: KeyType { get }
 
     func asRealm() -> RealmType
 }
