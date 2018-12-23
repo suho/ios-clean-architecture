@@ -38,7 +38,7 @@ final class RealmRepository<T: RealmRepresentable>: Repository where T == T.Real
         let concurrentQueue = DispatchQueue(label: "me.mlsuho.realm.concurrent", qos: .background)
         concurrentScheduler = ConcurrentDispatchQueueScheduler(queue: concurrentQueue)
         serialScheduler = SerialDispatchQueueScheduler(internalSerialQueueName: "me.mlsuho.realm.serial")
-        print("📂📂📂 ~~~ URL: \(RLMRealmPathForFile("default.realm"))")
+        print("📂📂📂 \(RLMRealmPathForFile("default.realm"))")
     }
 
     func findAll() -> Observable<[T]> {

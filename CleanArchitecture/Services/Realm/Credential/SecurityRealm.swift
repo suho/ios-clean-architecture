@@ -1,5 +1,5 @@
 //
-//  RealmSecurity.swift
+//  SecurityRealm.swift
 //  CleanArchitecture
 //
 //  Created by Su Ho V. on 12/20/18.
@@ -11,8 +11,7 @@ import Security
 import Realm
 import RealmSwift
 
-final class RealmSecurity {
-
+final class SecurityRealm {
     static let configuration: Realm.Configuration = {
         return Realm.Configuration(encryptionKey: credentialKey)
     }()

@@ -38,7 +38,7 @@ final class SigninNavigator: Coordinate, SigninCoordinate {
 
     func showSignin() {
         let controller = SigninViewController()
-        let credentialUseCase = RealmProvider(configuration: RealmSecurity.configuration)
+        let credentialUseCase = RealmProvider(configuration: SecurityRealm.configuration)
             .credential()
         controller.viewModel = SigninViewModel(navigator: self,
                                                authUseCase: NetworkProvider.current.auth(),

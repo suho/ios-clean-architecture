@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+extension App {
+    enum Color {}
+}

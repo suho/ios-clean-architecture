@@ -28,7 +28,7 @@ final class SplashNavigator: Coordinate, SplashCoordinate {
 
     func showSplash() {
         let controller = SplashViewController()
-        let credentialUseCase = RealmProvider(configuration: RealmSecurity.configuration).credential()
+        let credentialUseCase = RealmProvider(configuration: SecurityRealm.configuration).credential()
         controller.viewModel = SplashViewModel(credentialUseCase: credentialUseCase, navigator: self)
         navigationController.pushViewController(controller, animated: true)
     }

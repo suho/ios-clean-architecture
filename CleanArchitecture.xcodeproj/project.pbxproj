@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		37824278A1758B22FE302C2B /* Pods_CleanArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782273A712D21DC25C665C73 /* Pods_CleanArchitectureTests.framework */; };
+		43065BA321CF922600E3C060 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43065BA221CF922600E3C060 /* KeychainError.swift */; };
+		43065BA521CF924B00E3C060 /* KeychainQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43065BA421CF924B00E3C060 /* KeychainQuery.swift */; };
+		43065BA721CF927500E3C060 /* Keychain+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43065BA621CF927500E3C060 /* Keychain+Rx.swift */; };
+		43065BA921CF98CD00E3C060 /* CredentialUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43065BA821CF98CD00E3C060 /* CredentialUseCase.swift */; };
 		4307933F21C9D7D7003C5BF0 /* UIImageView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307933E21C9D7D7003C5BF0 /* UIImageView+Rx.swift */; };
 		4307934121C9D80D003C5BF0 /* RxError+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934021C9D80D003C5BF0 /* RxError+Rx.swift */; };
 		4307934321C9DA6C003C5BF0 /* Driver+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934221C9DA6C003C5BF0 /* Driver+Rx.swift */; };
@@ -57,7 +61,7 @@
 		439809ED21CB9DF100E05C14 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809EB21CB9DF100E05C14 /* UserTarget.swift */; };
 		439809EE21CB9DF100E05C14 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809EC21CB9DF100E05C14 /* UserNetwork.swift */; };
 		439809F121CB9E7700E05C14 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809F021CB9E7700E05C14 /* UserUseCase.swift */; };
-		43E16B6921CB480D004785C7 /* RealmSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B6821CB480D004785C7 /* RealmSecurity.swift */; };
+		43E16B6921CB480D004785C7 /* SecurityRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B6821CB480D004785C7 /* SecurityRealm.swift */; };
 		43E16B6B21CB4E27004785C7 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B6A21CB4E27004785C7 /* Session.swift */; };
 		43E16B6E21CB6630004785C7 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B6D21CB6630004785C7 /* UserDefaults.swift */; };
 		43E16B7221CB6A07004785C7 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B7021CB6A07004785C7 /* MeViewController.swift */; };
@@ -83,6 +87,10 @@
 
 /* Begin PBXFileReference section */
 		36A681191E9522F67040C5B4 /* Pods_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43065BA221CF922600E3C060 /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
+		43065BA421CF924B00E3C060 /* KeychainQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainQuery.swift; sourceTree = "<group>"; };
+		43065BA621CF927500E3C060 /* Keychain+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain+Rx.swift"; sourceTree = "<group>"; };
+		43065BA821CF98CD00E3C060 /* CredentialUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialUseCase.swift; sourceTree = "<group>"; };
 		4307933E21C9D7D7003C5BF0 /* UIImageView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Rx.swift"; sourceTree = "<group>"; };
 		4307934021C9D80D003C5BF0 /* RxError+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxError+Rx.swift"; sourceTree = "<group>"; };
 		4307934221C9DA6C003C5BF0 /* Driver+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Driver+Rx.swift"; sourceTree = "<group>"; };
@@ -136,7 +144,7 @@
 		439809EB21CB9DF100E05C14 /* UserTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTarget.swift; sourceTree = "<group>"; };
 		439809EC21CB9DF100E05C14 /* UserNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
 		439809F021CB9E7700E05C14 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
-		43E16B6821CB480D004785C7 /* RealmSecurity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSecurity.swift; sourceTree = "<group>"; };
+		43E16B6821CB480D004785C7 /* SecurityRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityRealm.swift; sourceTree = "<group>"; };
 		43E16B6A21CB4E27004785C7 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		43E16B6D21CB6630004785C7 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		43E16B7021CB6A07004785C7 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +195,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		43065BA021CF920800E3C060 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				4307936821CA79ED003C5BF0 /* Keychain.swift */,
+				43065BA221CF922600E3C060 /* KeychainError.swift */,
+				43065BA421CF924B00E3C060 /* KeychainQuery.swift */,
+				43065BA621CF927500E3C060 /* Keychain+Rx.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		4307933D21C9D7C6003C5BF0 /* Rx */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +240,7 @@
 		4307936321CA75D4003C5BF0 /* Credential */ = {
 			isa = PBXGroup;
 			children = (
+				43E16B6821CB480D004785C7 /* SecurityRealm.swift */,
 				4307935C21CA13A5003C5BF0 /* CredentialRealm.swift */,
 			);
 			path = Credential;
@@ -229,7 +249,7 @@
 		4307936A21CA7F36003C5BF0 /* Apple */ = {
 			isa = PBXGroup;
 			children = (
-				4307936821CA79ED003C5BF0 /* Keychain.swift */,
+				43065BA021CF920800E3C060 /* Keychain */,
 			);
 			path = Apple;
 			sourceTree = "<group>";
@@ -285,6 +305,7 @@
 			children = (
 				433BCB1121C929460098DCF8 /* AuthUseCase.swift */,
 				439809F021CB9E7700E05C14 /* UserUseCase.swift */,
+				43065BA821CF98CD00E3C060 /* CredentialUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -485,7 +506,6 @@
 			children = (
 				4307935821CA1258003C5BF0 /* RealmProvider.swift */,
 				4307935F21CA1423003C5BF0 /* RealmRepository.swift */,
-				43E16B6821CB480D004785C7 /* RealmSecurity.swift */,
 				4307936321CA75D4003C5BF0 /* Credential */,
 				4307934821CA0538003C5BF0 /* Entities */,
 			);
@@ -777,9 +797,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43065BA521CF924B00E3C060 /* KeychainQuery.swift in Sources */,
 				4307936621CA78A2003C5BF0 /* EncryptionConfig+Realm.swift in Sources */,
 				433BCB1421C929670098DCF8 /* User.swift in Sources */,
-				43E16B6921CB480D004785C7 /* RealmSecurity.swift in Sources */,
+				43E16B6921CB480D004785C7 /* SecurityRealm.swift in Sources */,
 				433BCAEB21C7F0B50098DCF8 /* ViewModel.swift in Sources */,
 				4307934521C9E393003C5BF0 /* Coordinate.swift in Sources */,
 				433BCADC21C7F0000098DCF8 /* TargetType.swift in Sources */,
@@ -808,10 +829,12 @@
 				4307934321C9DA6C003C5BF0 /* Driver+Rx.swift in Sources */,
 				4307935921CA1258003C5BF0 /* RealmProvider.swift in Sources */,
 				4307936921CA79ED003C5BF0 /* Keychain.swift in Sources */,
+				43065BA321CF922600E3C060 /* KeychainError.swift in Sources */,
 				43E16B7521CB6A13004785C7 /* MeViewModel.swift in Sources */,
 				439809ED21CB9DF100E05C14 /* UserTarget.swift in Sources */,
 				433BCB1221C929460098DCF8 /* AuthUseCase.swift in Sources */,
 				4307933F21C9D7D7003C5BF0 /* UIImageView+Rx.swift in Sources */,
+				43065BA721CF927500E3C060 /* Keychain+Rx.swift in Sources */,
 				4307934721C9ECB5003C5BF0 /* RxIndicator+Rx.swift in Sources */,
 				43682B3121C6AEF800716C2C /* SigninNavigator.swift in Sources */,
 				4307934121C9D80D003C5BF0 /* RxError+Rx.swift in Sources */,
@@ -824,6 +847,7 @@
 				433BCB1C21C92BD40098DCF8 /* SigninViewModel.swift in Sources */,
 				433BCADF21C7F0000098DCF8 /* Task.swift in Sources */,
 				439809EE21CB9DF100E05C14 /* UserNetwork.swift in Sources */,
+				43065BA921CF98CD00E3C060 /* CredentialUseCase.swift in Sources */,
 				43E16B8021CB8E7A004785C7 /* SplashNavigator.swift in Sources */,
 				433BCB1021C928FB0098DCF8 /* Credential.swift in Sources */,
 				43E16B6B21CB4E27004785C7 /* Session.swift in Sources */,
