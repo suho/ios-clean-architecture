@@ -20,9 +20,9 @@ final class MeViewModel: ViewModel {
 
     private let navigator: MeNavigator
     private let networkService: UserUseCase
-    private let realmService: UserUseCase & UserLocalUseCase
+    private let realmService: UserRealmUseCase
 
-    init(navigator: MeNavigator, networkService: UserUseCase, realmService: UserUseCase & UserLocalUseCase) {
+    init(navigator: MeNavigator, networkService: UserUseCase, realmService: UserRealmUseCase) {
         self.navigator = navigator
         self.networkService = networkService
         self.realmService = realmService

@@ -18,7 +18,7 @@ final class RealmProvider {
         self.configuration = configuration
     }
 
-    func user() -> UserUseCase & UserLocalUseCase {
+    func user() -> UserRealmUseCase {
         let repository = RealmRepository<User>(configuration: configuration)
         return UserRealm(repository: repository)
     }

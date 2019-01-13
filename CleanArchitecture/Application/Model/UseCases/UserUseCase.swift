@@ -13,6 +13,7 @@ protocol UserUseCase {
     func profile() -> Observable<User>
 }
 
-protocol UserLocalUseCase {
+protocol UserRealmUseCase {
+    func profile() -> Observable<User>
     func save(user: User) -> Observable<User>
 }

@@ -11,7 +11,7 @@ import RealmSwift
 import RxRealm
 import RxSwift
 
-final class UserRealm<R: Repository>: UserUseCase, UserLocalUseCase where R.Entity == User {
+final class UserRealm<R: Repository>: UserRealmUseCase where R.Entity == User {
     private let repository: R
 
     init(repository: R) {
