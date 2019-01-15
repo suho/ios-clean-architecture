@@ -17,7 +17,11 @@ final class UserNetwork: UserUseCase {
         self.router = router
     }
 
-    func profile() -> Observable<User> {
-        return router.request(.user).map(User.self)
+    func me() -> Observable<User> {
+        return router.request(.me).map(User.self)
+    }
+
+    func register(username: String, avatar: String) -> Observable<User> {
+        return router.request(.register(username: username, avatar: avatar)).map(User.self)
     }
 }

@@ -1,0 +1,27 @@
+{
+  "name": "todo-tasks",
+  "version": "0.0.1",
+  "description": "Simple API for demo todo tasks app",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "test": "echo 'NA'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mlsuho/ios-clean-architecture.git"
+  },
+  "author": "mlsuho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mlsuho/ios-clean-architecture/issues"
+  },
+  "homepage": "https://github.com/mlsuho/ios-clean-architecture#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

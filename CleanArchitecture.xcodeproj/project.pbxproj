@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		37824278A1758B22FE302C2B /* Pods_CleanArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782273A712D21DC25C665C73 /* Pods_CleanArchitectureTests.framework */; };
-		43065BAC21CFAC2B00E3C060 /* RUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43065BAB21CFAC2B00E3C060 /* RUser.swift */; };
-		43065BAF21CFC45300E3C060 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43065BAE21CFC45300E3C060 /* UserRealm.swift */; };
 		4307933F21C9D7D7003C5BF0 /* UIImageView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307933E21C9D7D7003C5BF0 /* UIImageView+Rx.swift */; };
 		4307934121C9D80D003C5BF0 /* RxError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934021C9D80D003C5BF0 /* RxError.swift */; };
 		4307934321C9DA6C003C5BF0 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934221C9DA6C003C5BF0 /* Driver.swift */; };
 		4307934521C9E393003C5BF0 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934421C9E393003C5BF0 /* Coordinate.swift */; };
 		4307934721C9ECB5003C5BF0 /* RxIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934621C9ECB5003C5BF0 /* RxIndicator.swift */; };
 		4307935921CA1258003C5BF0 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307935821CA1258003C5BF0 /* RealmProvider.swift */; };
+		4310635421ED9A6B0088BB14 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310635321ED9A6B0088BB14 /* Task.swift */; };
+		4310635821ED9E940088BB14 /* TaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310635721ED9E940088BB14 /* TaskUseCase.swift */; };
+		4310635A21EDA5C40088BB14 /* RTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310635921EDA5C40088BB14 /* RTask.swift */; };
+		4310635C21EDA78F0088BB14 /* RealmTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310635B21EDA78F0088BB14 /* RealmTask.swift */; };
+		4310635E21EDB38F0088BB14 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310635D21EDB38F0088BB14 /* Date.swift */; };
 		433BCADC21C7F0000098DCF8 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD721C7F0000098DCF8 /* TargetType.swift */; };
 		433BCADD21C7F0000098DCF8 /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD821C7F0000098DCF8 /* Mapping.swift */; };
 		433BCADE21C7F0000098DCF8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD921C7F0000098DCF8 /* Router.swift */; };
-		433BCADF21C7F0000098DCF8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCADA21C7F0000098DCF8 /* Task.swift */; };
+		433BCADF21C7F0000098DCF8 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCADA21C7F0000098DCF8 /* HTTPTask.swift */; };
 		433BCAE821C7F0B50098DCF8 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAE321C7F0B50098DCF8 /* JSONDecoder.swift */; };
 		433BCAE921C7F0B50098DCF8 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAE421C7F0B50098DCF8 /* DateFormatter.swift */; };
 		433BCAEB21C7F0B50098DCF8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAE721C7F0B50098DCF8 /* ViewModel.swift */; };
@@ -27,22 +30,14 @@
 		433BCAEF21C7F3EA0098DCF8 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAEE21C7F3EA0098DCF8 /* NetworkProvider.swift */; };
 		433BCAFA21C804FB0098DCF8 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAF921C804FB0098DCF8 /* Dictionary.swift */; };
 		433BCAFC21C808B10098DCF8 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAFB21C808B10098DCF8 /* Sequence.swift */; };
-		433BCB0C21C8F7D80098DCF8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCB0B21C8F7D80098DCF8 /* GradientView.swift */; };
 		433BCB0E21C91FAD0098DCF8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCB0D21C91FAD0098DCF8 /* Color.swift */; };
-		433BCB1221C929460098DCF8 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCB1121C929460098DCF8 /* AuthUseCase.swift */; };
 		433BCB1421C929670098DCF8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCB1321C929670098DCF8 /* User.swift */; };
-		433BCB1921C92BC90098DCF8 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCB1721C92BC90098DCF8 /* SigninViewController.swift */; };
-		433BCB1A21C92BC90098DCF8 /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 433BCB1821C92BC90098DCF8 /* SigninViewController.xib */; };
-		433BCB1C21C92BD40098DCF8 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCB1B21C92BD40098DCF8 /* SigninViewModel.swift */; };
-		433BCB1F21C92CAD0098DCF8 /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCB1E21C92CAD0098DCF8 /* AuthTarget.swift */; };
-		433BCB2121C92E330098DCF8 /* AuthNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCB2021C92E330098DCF8 /* AuthNetwork.swift */; };
 		4353C67E21C6A3F100A824DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353C67D21C6A3F100A824DD /* AppDelegate.swift */; };
 		4353C68521C6A3F200A824DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4353C68421C6A3F200A824DD /* Assets.xcassets */; };
 		4353C68821C6A3F200A824DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4353C68621C6A3F200A824DD /* LaunchScreen.storyboard */; };
 		4353C69321C6A3F200A824DD /* CleanArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353C69221C6A3F200A824DD /* CleanArchitectureTests.swift */; };
 		43682B1721C6A93F00716C2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B1621C6A93F00716C2C /* ViewController.swift */; };
 		43682B1A21C6A9B900716C2C /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B1921C6A9B900716C2C /* Application.swift */; };
-		43682B3121C6AEF800716C2C /* SigninNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3021C6AEF800716C2C /* SigninNavigator.swift */; };
 		43682B3921C6B28B00716C2C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3821C6B28B00716C2C /* App.swift */; };
 		43682B3C21C6B38B00716C2C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3B21C6B38B00716C2C /* String.swift */; };
 		439809ED21CB9DF100E05C14 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809EB21CB9DF100E05C14 /* UserTarget.swift */; };
@@ -54,11 +49,6 @@
 		43C2452721CFDDD000EEE203 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2452121CFDDD000EEE203 /* Reactive.swift */; };
 		43C2452821CFDDD000EEE203 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2452221CFDDD000EEE203 /* Object.swift */; };
 		43C2452921CFDDD000EEE203 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2452321CFDDD000EEE203 /* RealmRepository.swift */; };
-		43E16B6B21CB4E27004785C7 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B6A21CB4E27004785C7 /* Session.swift */; };
-		43E16B7221CB6A07004785C7 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B7021CB6A07004785C7 /* MeViewController.swift */; };
-		43E16B7321CB6A07004785C7 /* MeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E16B7121CB6A07004785C7 /* MeViewController.xib */; };
-		43E16B7521CB6A13004785C7 /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B7421CB6A13004785C7 /* MeViewModel.swift */; };
-		43E16B7721CB6A1C004785C7 /* MeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E16B7621CB6A1C004785C7 /* MeNavigator.swift */; };
 		956645E2564500EDB3CF387E /* Pods_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02D3B665AE9543DC884C9D2 /* Pods_CleanArchitecture.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,18 +64,21 @@
 
 /* Begin PBXFileReference section */
 		36A681191E9522F67040C5B4 /* Pods_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43065BAB21CFAC2B00E3C060 /* RUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUser.swift; sourceTree = "<group>"; };
-		43065BAE21CFC45300E3C060 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
 		4307933E21C9D7D7003C5BF0 /* UIImageView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Rx.swift"; sourceTree = "<group>"; };
 		4307934021C9D80D003C5BF0 /* RxError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxError.swift; sourceTree = "<group>"; };
 		4307934221C9DA6C003C5BF0 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		4307934421C9E393003C5BF0 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		4307934621C9ECB5003C5BF0 /* RxIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxIndicator.swift; sourceTree = "<group>"; };
 		4307935821CA1258003C5BF0 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
+		4310635321ED9A6B0088BB14 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		4310635721ED9E940088BB14 /* TaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUseCase.swift; sourceTree = "<group>"; };
+		4310635921EDA5C40088BB14 /* RTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTask.swift; sourceTree = "<group>"; };
+		4310635B21EDA78F0088BB14 /* RealmTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTask.swift; sourceTree = "<group>"; };
+		4310635D21EDB38F0088BB14 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		433BCAD721C7F0000098DCF8 /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		433BCAD821C7F0000098DCF8 /* Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapping.swift; sourceTree = "<group>"; };
 		433BCAD921C7F0000098DCF8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		433BCADA21C7F0000098DCF8 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		433BCADA21C7F0000098DCF8 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		433BCAE321C7F0B50098DCF8 /* JSONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 		433BCAE421C7F0B50098DCF8 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		433BCAE721C7F0B50098DCF8 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -93,15 +86,8 @@
 		433BCAEE21C7F3EA0098DCF8 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		433BCAF921C804FB0098DCF8 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		433BCAFB21C808B10098DCF8 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
-		433BCB0B21C8F7D80098DCF8 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		433BCB0D21C91FAD0098DCF8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		433BCB1121C929460098DCF8 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
 		433BCB1321C929670098DCF8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		433BCB1721C92BC90098DCF8 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
-		433BCB1821C92BC90098DCF8 /* SigninViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
-		433BCB1B21C92BD40098DCF8 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
-		433BCB1E21C92CAD0098DCF8 /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
-		433BCB2021C92E330098DCF8 /* AuthNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetwork.swift; sourceTree = "<group>"; };
 		4353C67A21C6A3F100A824DD /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4353C67D21C6A3F100A824DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4353C68421C6A3F200A824DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,7 +98,6 @@
 		4353C69421C6A3F200A824DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43682B1621C6A93F00716C2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43682B1921C6A9B900716C2C /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		43682B3021C6AEF800716C2C /* SigninNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninNavigator.swift; sourceTree = "<group>"; };
 		43682B3821C6B28B00716C2C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		43682B3B21C6B38B00716C2C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		439809EB21CB9DF100E05C14 /* UserTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTarget.swift; sourceTree = "<group>"; };
@@ -124,11 +109,6 @@
 		43C2452121CFDDD000EEE203 /* Reactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
 		43C2452221CFDDD000EEE203 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		43C2452321CFDDD000EEE203 /* RealmRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
-		43E16B6A21CB4E27004785C7 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		43E16B7021CB6A07004785C7 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
-		43E16B7121CB6A07004785C7 /* MeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeViewController.xib; sourceTree = "<group>"; };
-		43E16B7421CB6A13004785C7 /* MeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewModel.swift; sourceTree = "<group>"; };
-		43E16B7621CB6A1C004785C7 /* MeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeNavigator.swift; sourceTree = "<group>"; };
 		782273A712D21DC25C665C73 /* Pods_CleanArchitectureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitectureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		920C447378C5817458E5AE75 /* Pods-CleanArchitectureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanArchitectureTests/Pods-CleanArchitectureTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A985D34ABB22C9884803DFB1 /* Pods-CleanArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitecture.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,14 +149,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		43065BAD21CFC41800E3C060 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				43065BAE21CFC45300E3C060 /* UserRealm.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
 		4307933D21C9D7C6003C5BF0 /* Reactive */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,16 +163,45 @@
 		4307934821CA0538003C5BF0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				43065BAB21CFAC2B00E3C060 /* RUser.swift */,
+				4310635921EDA5C40088BB14 /* RTask.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		4310635121ED05FE0088BB14 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				439809E621CB9DB900E05C14 /* User */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4310635221ED06120088BB14 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4310635B21EDA78F0088BB14 /* RealmTask.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4310635F21EDB7590088BB14 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				43C2452221CFDDD000EEE203 /* Object.swift */,
+				43C2452021CFDDD000EEE203 /* RealmRepresentable.swift */,
+				43C2451F21CFDDD000EEE203 /* RealmError.swift */,
+				43C2451E21CFDDD000EEE203 /* ModelConvertibleType.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		433BCAD421C7EDF60098DCF8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				43E16B6F21CB69F2004785C7 /* Me */,
-				433BCB1621C92BB10098DCF8 /* Signin */,
+				4386835F21EB59B600AF19BE /* 003 - Me */,
+				4386835E21EB59A800AF19BE /* 002 - History */,
+				4386835D21EB599800AF19BE /* 001 - Today */,
+				4386835C21EB58E200AF19BE /* 000 - Root */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -211,9 +212,8 @@
 				433BCAD821C7F0000098DCF8 /* Mapping.swift */,
 				433BCAEC21C7F2CB0098DCF8 /* NetworkError.swift */,
 				433BCAD921C7F0000098DCF8 /* Router.swift */,
-				43E16B6A21CB4E27004785C7 /* Session.swift */,
 				433BCAD721C7F0000098DCF8 /* TargetType.swift */,
-				433BCADA21C7F0000098DCF8 /* Task.swift */,
+				433BCADA21C7F0000098DCF8 /* HTTPTask.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -234,6 +234,7 @@
 				433BCAE421C7F0B50098DCF8 /* DateFormatter.swift */,
 				433BCAF921C804FB0098DCF8 /* Dictionary.swift */,
 				433BCAFB21C808B10098DCF8 /* Sequence.swift */,
+				4310635D21EDB38F0088BB14 /* Date.swift */,
 			);
 			path = Apple;
 			sourceTree = "<group>";
@@ -241,38 +242,10 @@
 		433BCAFF21C80F7A0098DCF8 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				433BCB1121C929460098DCF8 /* AuthUseCase.swift */,
 				439809F021CB9E7700E05C14 /* UserUseCase.swift */,
+				4310635721ED9E940088BB14 /* TaskUseCase.swift */,
 			);
 			path = UseCases;
-			sourceTree = "<group>";
-		};
-		433BCB0A21C8F7C90098DCF8 /* GradientView */ = {
-			isa = PBXGroup;
-			children = (
-				433BCB0B21C8F7D80098DCF8 /* GradientView.swift */,
-			);
-			path = GradientView;
-			sourceTree = "<group>";
-		};
-		433BCB1621C92BB10098DCF8 /* Signin */ = {
-			isa = PBXGroup;
-			children = (
-				43682B3021C6AEF800716C2C /* SigninNavigator.swift */,
-				433BCB1721C92BC90098DCF8 /* SigninViewController.swift */,
-				433BCB1821C92BC90098DCF8 /* SigninViewController.xib */,
-				433BCB1B21C92BD40098DCF8 /* SigninViewModel.swift */,
-			);
-			path = Signin;
-			sourceTree = "<group>";
-		};
-		433BCB1D21C92CA10098DCF8 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				433BCB2021C92E330098DCF8 /* AuthNetwork.swift */,
-				433BCB1E21C92CAD0098DCF8 /* AuthTarget.swift */,
-			);
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		4353C67121C6A3F100A824DD = {
@@ -332,7 +305,6 @@
 		43682B0D21C6A8A300716C2C /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				433BCB0A21C8F7C90098DCF8 /* GradientView */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -412,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				433BCB1321C929670098DCF8 /* User.swift */,
+				4310635321ED9A6B0088BB14 /* Task.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -429,9 +402,8 @@
 			isa = PBXGroup;
 			children = (
 				433BCAEE21C7F3EA0098DCF8 /* NetworkProvider.swift */,
-				433BCB1D21C92CA10098DCF8 /* Auth */,
 				433BCAD521C7F0000098DCF8 /* Core */,
-				439809E621CB9DB900E05C14 /* User */,
+				4310635121ED05FE0088BB14 /* Modules */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -440,11 +412,40 @@
 			isa = PBXGroup;
 			children = (
 				4307935821CA1258003C5BF0 /* RealmProvider.swift */,
+				4310635F21EDB7590088BB14 /* Common */,
 				43C2451D21CFDDD000EEE203 /* Core */,
+				4310635221ED06120088BB14 /* Modules */,
 				4307934821CA0538003C5BF0 /* Entities */,
-				43065BAD21CFC41800E3C060 /* User */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		4386835C21EB58E200AF19BE /* 000 - Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "000 - Root";
+			sourceTree = "<group>";
+		};
+		4386835D21EB599800AF19BE /* 001 - Today */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "001 - Today";
+			sourceTree = "<group>";
+		};
+		4386835E21EB59A800AF19BE /* 002 - History */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "002 - History";
+			sourceTree = "<group>";
+		};
+		4386835F21EB59B600AF19BE /* 003 - Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "003 - Me";
 			sourceTree = "<group>";
 		};
 		439809E621CB9DB900E05C14 /* User */ = {
@@ -459,25 +460,10 @@
 		43C2451D21CFDDD000EEE203 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				43C2451E21CFDDD000EEE203 /* ModelConvertibleType.swift */,
-				43C2451F21CFDDD000EEE203 /* RealmError.swift */,
-				43C2452021CFDDD000EEE203 /* RealmRepresentable.swift */,
 				43C2452121CFDDD000EEE203 /* Reactive.swift */,
-				43C2452221CFDDD000EEE203 /* Object.swift */,
 				43C2452321CFDDD000EEE203 /* RealmRepository.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		43E16B6F21CB69F2004785C7 /* Me */ = {
-			isa = PBXGroup;
-			children = (
-				43E16B7621CB6A1C004785C7 /* MeNavigator.swift */,
-				43E16B7021CB6A07004785C7 /* MeViewController.swift */,
-				43E16B7121CB6A07004785C7 /* MeViewController.xib */,
-				43E16B7421CB6A13004785C7 /* MeViewModel.swift */,
-			);
-			path = Me;
 			sourceTree = "<group>";
 		};
 		51731A29D82242B01C173510 /* Pods */ = {
@@ -579,9 +565,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				433BCB1A21C92BC90098DCF8 /* SigninViewController.xib in Resources */,
 				4353C68821C6A3F200A824DD /* LaunchScreen.storyboard in Resources */,
-				43E16B7321CB6A07004785C7 /* MeViewController.xib in Resources */,
 				4353C68521C6A3F200A824DD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -737,15 +721,13 @@
 				433BCAEB21C7F0B50098DCF8 /* ViewModel.swift in Sources */,
 				43C2452421CFDDD000EEE203 /* ModelConvertibleType.swift in Sources */,
 				4307934521C9E393003C5BF0 /* Coordinate.swift in Sources */,
+				4310635C21EDA78F0088BB14 /* RealmTask.swift in Sources */,
 				433BCADC21C7F0000098DCF8 /* TargetType.swift in Sources */,
 				43682B1A21C6A9B900716C2C /* Application.swift in Sources */,
-				43E16B7721CB6A1C004785C7 /* MeNavigator.swift in Sources */,
-				43E16B7221CB6A07004785C7 /* MeViewController.swift in Sources */,
 				43C2452621CFDDD000EEE203 /* RealmRepresentable.swift in Sources */,
 				433BCAEF21C7F3EA0098DCF8 /* NetworkProvider.swift in Sources */,
 				433BCB0E21C91FAD0098DCF8 /* Color.swift in Sources */,
 				433BCAFA21C804FB0098DCF8 /* Dictionary.swift in Sources */,
-				433BCB1921C92BC90098DCF8 /* SigninViewController.swift in Sources */,
 				43682B3C21C6B38B00716C2C /* String.swift in Sources */,
 				433BCAE921C7F0B50098DCF8 /* DateFormatter.swift in Sources */,
 				433BCADD21C7F0000098DCF8 /* Mapping.swift in Sources */,
@@ -754,30 +736,24 @@
 				43682B3921C6B28B00716C2C /* App.swift in Sources */,
 				43C2452921CFDDD000EEE203 /* RealmRepository.swift in Sources */,
 				433BCAE821C7F0B50098DCF8 /* JSONDecoder.swift in Sources */,
-				433BCB1F21C92CAD0098DCF8 /* AuthTarget.swift in Sources */,
 				4307934321C9DA6C003C5BF0 /* Driver.swift in Sources */,
 				43C2452521CFDDD000EEE203 /* RealmError.swift in Sources */,
-				43065BAC21CFAC2B00E3C060 /* RUser.swift in Sources */,
 				4307935921CA1258003C5BF0 /* RealmProvider.swift in Sources */,
-				43E16B7521CB6A13004785C7 /* MeViewModel.swift in Sources */,
 				439809ED21CB9DF100E05C14 /* UserTarget.swift in Sources */,
-				433BCB1221C929460098DCF8 /* AuthUseCase.swift in Sources */,
 				4307933F21C9D7D7003C5BF0 /* UIImageView+Rx.swift in Sources */,
 				4307934721C9ECB5003C5BF0 /* RxIndicator.swift in Sources */,
-				43065BAF21CFC45300E3C060 /* UserRealm.swift in Sources */,
-				43682B3121C6AEF800716C2C /* SigninNavigator.swift in Sources */,
 				4307934121C9D80D003C5BF0 /* RxError.swift in Sources */,
+				4310635821ED9E940088BB14 /* TaskUseCase.swift in Sources */,
 				43682B1721C6A93F00716C2C /* ViewController.swift in Sources */,
+				4310635A21EDA5C40088BB14 /* RTask.swift in Sources */,
 				433BCADE21C7F0000098DCF8 /* Router.swift in Sources */,
-				433BCB0C21C8F7D80098DCF8 /* GradientView.swift in Sources */,
 				4353C67E21C6A3F100A824DD /* AppDelegate.swift in Sources */,
 				439809F121CB9E7700E05C14 /* UserUseCase.swift in Sources */,
-				433BCB1C21C92BD40098DCF8 /* SigninViewModel.swift in Sources */,
-				433BCADF21C7F0000098DCF8 /* Task.swift in Sources */,
+				433BCADF21C7F0000098DCF8 /* HTTPTask.swift in Sources */,
 				43C2452821CFDDD000EEE203 /* Object.swift in Sources */,
 				439809EE21CB9DF100E05C14 /* UserNetwork.swift in Sources */,
-				43E16B6B21CB4E27004785C7 /* Session.swift in Sources */,
-				433BCB2121C92E330098DCF8 /* AuthNetwork.swift in Sources */,
+				4310635E21EDB38F0088BB14 /* Date.swift in Sources */,
+				4310635421ED9A6B0088BB14 /* Task.swift in Sources */,
 				433BCAED21C7F2CB0098DCF8 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,41 +10,48 @@ import Foundation
 import Alamofire
 
 enum UserTarget {
-    case user
+    case register(username: String, avatar: String)
+    case me
 }
 
 // MARK: - TargetType
 extension UserTarget: TargetType {
     var baseURL: String {
-        return "https://api.github.com"
+        return "http://localhost:8000/users"
     }
 
     var path: String {
         switch self {
-        case .user:
-            return "/user"
+        case .register:
+            return ""
+        case .me:
+            return "/me"
         }
     }
 
     var method: HTTPMethod {
         switch self {
-        case .user:
+        case .register:
+            return .post
+        case .me:
             return .get
         }
     }
 
     var task: HTTPTask {
         switch self {
-        case .user:
+        case .register(let username, let avatar):
+            let params: Parameters = [
+                "username": username,
+                "avatar": avatar
+            ]
+            return .requestParameters(params: params, encoding: URLEncoding.default)
+        case .me:
             return .requestPlain
         }
     }
 
     var headers: HTTPHeaders? {
-        switch self {
-        case .user:
-            guard let token = Session.current.token else { return nil }
-            return ["Authorization": "Token \(token)"]
-        }
+        return nil
     }
 }

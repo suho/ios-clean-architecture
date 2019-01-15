@@ -20,10 +20,11 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        Application.shared.auth(in: window)
-        window.makeKeyAndVisible()
-        self.window = window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        if let window = window {
+            Application.shared.root(in: window)
+            window.makeKeyAndVisible()
+        }
         return true
     }
 }

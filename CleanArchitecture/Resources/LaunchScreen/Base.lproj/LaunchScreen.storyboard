@@ -18,16 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github-logo" translatesAutoresizingMaskIntoConstraints="NO" id="zCZ-gD-cCY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-H9-Q74">
+                                <rect key="frame" x="144.5" y="333" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zCZ-gD-cCY" secondAttribute="bottom" id="SUY-7g-z0h"/>
-                            <constraint firstItem="zCZ-gD-cCY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yvz-o3-Dt9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zCZ-gD-cCY" secondAttribute="trailing" id="i3w-hn-EoF"/>
-                            <constraint firstItem="zCZ-gD-cCY" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="zYI-ph-fid"/>
+                            <constraint firstItem="0c6-H9-Q74" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gx8-Fu-eIh"/>
+                            <constraint firstItem="0c6-H9-Q74" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xyh-iy-Nuv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -37,7 +38,4 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="github-logo" width="1200" height="1200"/>
-    </resources>
 </document>

@@ -10,10 +10,6 @@ import Foundation
 import RxSwift
 
 protocol UserUseCase {
-    func profile() -> Observable<User>
-}
-
-protocol UserRealmUseCase {
-    func profile() -> Observable<User>
-    func save(user: User) -> Observable<User>
+    func me() -> Observable<User>
+    func register(username: String, avatar: String) -> Observable<User>
 }

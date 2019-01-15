@@ -1,5 +1,5 @@
 //
-//  Task.swift
+//  HTTPTask.swift
 //  CleanArchitecture
 //
 //  Created by Su Ho V. on 12/16/18.

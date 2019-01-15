@@ -17,9 +17,4 @@ final class RealmProvider {
     init(configuration: Realm.Configuration = Realm.Configuration()) {
         self.configuration = configuration
     }
-
-    func user() -> UserRealmUseCase {
-        let repository = RealmRepository<User>(configuration: configuration)
-        return UserRealm(repository: repository)
-    }
 }

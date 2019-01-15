@@ -10,13 +10,13 @@ import Foundation
 
 final class User {
     let id: Int
-    let avatarURL: String
-    let bio: String
+    let username: String
+    let avatar: String
 
-    init(id: Int, avatarURL: String, bio: String) {
+    init(id: Int, username: String, avatar: String) {
         self.id = id
-        self.avatarURL = avatarURL
-        self.bio = bio
+        self.username = username
+        self.avatar = avatar
     }
 }
 
@@ -24,7 +24,7 @@ final class User {
 extension User: Codable {
     private enum CodingKeys: String, CodingKey {
         case id
-        case avatarURL = "avatar_url"
-        case bio
+        case username
+        case avatar
     }
 }

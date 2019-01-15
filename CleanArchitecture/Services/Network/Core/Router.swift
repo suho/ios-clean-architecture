@@ -27,6 +27,9 @@ final class Router<Target: TargetType>: NetworkRouter {
     }
 
     func request(_ target: Target) -> Observable<Data> {
+        guard let manager = NetworkReachabilityManager(), manager.isReachable else {
+            return Observable.error(NetworkError.offline)
+        }
         let url = target.baseURL + target.path
         switch target.task {
         case .requestPlain:
