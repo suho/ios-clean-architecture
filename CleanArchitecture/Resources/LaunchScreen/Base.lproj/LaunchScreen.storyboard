@@ -18,17 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-H9-Q74">
-                                <rect key="frame" x="144.5" y="333" width="86" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-splash" translatesAutoresizingMaskIntoConstraints="NO" id="TRf-9A-q4M">
+                                <rect key="frame" x="-15" y="191.5" width="405" height="304"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0c6-H9-Q74" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gx8-Fu-eIh"/>
-                            <constraint firstItem="0c6-H9-Q74" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xyh-iy-Nuv"/>
+                            <constraint firstItem="TRf-9A-q4M" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8nj-sv-YFu"/>
+                            <constraint firstItem="TRf-9A-q4M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Jaj-WQ-NLx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,4 +35,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="img-splash" width="405.5" height="304"/>
+    </resources>
 </document>

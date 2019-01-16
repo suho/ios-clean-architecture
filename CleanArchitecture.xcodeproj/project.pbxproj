@@ -19,6 +19,8 @@
 		4310635A21EDA5C40088BB14 /* RTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310635921EDA5C40088BB14 /* RTask.swift */; };
 		4310635C21EDA78F0088BB14 /* RealmTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310635B21EDA78F0088BB14 /* RealmTask.swift */; };
 		4310635E21EDB38F0088BB14 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310635D21EDB38F0088BB14 /* Date.swift */; };
+		4310636221EDB8CC0088BB14 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310636021EDB8CC0088BB14 /* TabBarController.swift */; };
+		4310636521EDBCF90088BB14 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310636421EDBCF90088BB14 /* UIColor.swift */; };
 		433BCADC21C7F0000098DCF8 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD721C7F0000098DCF8 /* TargetType.swift */; };
 		433BCADD21C7F0000098DCF8 /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD821C7F0000098DCF8 /* Mapping.swift */; };
 		433BCADE21C7F0000098DCF8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD921C7F0000098DCF8 /* Router.swift */; };
@@ -75,6 +77,8 @@
 		4310635921EDA5C40088BB14 /* RTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTask.swift; sourceTree = "<group>"; };
 		4310635B21EDA78F0088BB14 /* RealmTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTask.swift; sourceTree = "<group>"; };
 		4310635D21EDB38F0088BB14 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		4310636021EDB8CC0088BB14 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4310636421EDBCF90088BB14 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		433BCAD721C7F0000098DCF8 /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		433BCAD821C7F0000098DCF8 /* Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapping.swift; sourceTree = "<group>"; };
 		433BCAD921C7F0000098DCF8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 				433BCAF921C804FB0098DCF8 /* Dictionary.swift */,
 				433BCAFB21C808B10098DCF8 /* Sequence.swift */,
 				4310635D21EDB38F0088BB14 /* Date.swift */,
+				4310636421EDBCF90088BB14 /* UIColor.swift */,
 			);
 			path = Apple;
 			sourceTree = "<group>";
@@ -423,6 +428,7 @@
 		4386835C21EB58E200AF19BE /* 000 - Root */ = {
 			isa = PBXGroup;
 			children = (
+				4310636021EDB8CC0088BB14 /* TabBarController.swift */,
 			);
 			path = "000 - Root";
 			sourceTree = "<group>";
@@ -744,7 +750,9 @@
 				4307934721C9ECB5003C5BF0 /* RxIndicator.swift in Sources */,
 				4307934121C9D80D003C5BF0 /* RxError.swift in Sources */,
 				4310635821ED9E940088BB14 /* TaskUseCase.swift in Sources */,
+				4310636221EDB8CC0088BB14 /* TabBarController.swift in Sources */,
 				43682B1721C6A93F00716C2C /* ViewController.swift in Sources */,
+				4310636521EDBCF90088BB14 /* UIColor.swift in Sources */,
 				4310635A21EDA5C40088BB14 /* RTask.swift in Sources */,
 				433BCADE21C7F0000098DCF8 /* Router.swift in Sources */,
 				4353C67E21C6A3F100A824DD /* AppDelegate.swift in Sources */,

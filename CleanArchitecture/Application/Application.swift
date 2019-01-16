@@ -14,7 +14,7 @@ final class Application {
     private init() {}
 
     func root(in window: UIWindow) {
-        let tabbar = UITabBarController()
+        let tabbar = TabBarController()
         window.rootViewController = tabbar
     }
 }
