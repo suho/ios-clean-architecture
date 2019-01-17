@@ -21,7 +21,7 @@ final class Task {
     init(id: String = UUID().uuidString,
          name: String, startAt: Date,
          createdAt: Date = Date(), updatedAt: Date = Date(),
-         isFinish: Bool = false, noticeBefore: Seconds) {
+         isFinish: Bool = false, noticeBefore: Seconds = 60) {
         self.id = id
         self.name = name
         self.startAt = startAt

@@ -34,7 +34,7 @@ final class RealmRepository<T: RealmRepresentable>: Repository where T == T.Real
         return realm
     }
 
-    init(configuration: Realm.Configuration) {
+    init(configuration: Realm.Configuration = Realm.Configuration()) {
         self.configuration = configuration
         let concurrentQueue = DispatchQueue(label: "me.mlsuho.realm.concurrent", qos: .background)
         concurrentScheduler = ConcurrentDispatchQueueScheduler(queue: concurrentQueue)

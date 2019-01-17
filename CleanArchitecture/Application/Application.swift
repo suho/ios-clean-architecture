@@ -9,12 +9,14 @@
 import UIKit
 
 final class Application {
-    static let shared = Application()
+    static let current = Application()
+    var coodinator: RootCoordinator?
 
     private init() {}
 
-    func root(in window: UIWindow) {
-        let tabbar = TabBarController()
-        window.rootViewController = tabbar
+    func root(in window: UIWindow?) {
+        let coodinator = RootCoordinator()
+        coodinator.window = window
+        coodinator.showScreen(.tabBar)
     }
 }

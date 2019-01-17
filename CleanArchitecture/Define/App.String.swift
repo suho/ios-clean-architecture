@@ -9,5 +9,9 @@
 extension App {
     enum String {
         static let appName = "CleanArchitecture"
+        static let today = "Today"
+        static let history = "History"
+        static let settings = "Settings"
+        static let ok = "OK"
     }
 }
