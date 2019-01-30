@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol TaskCellDelegate {
+protocol TaskCellDelegate: class {
     func cell(_ cell: TaskCell, didSelectTask task: Task)
 }
 

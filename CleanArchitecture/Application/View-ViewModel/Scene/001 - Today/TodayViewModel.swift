@@ -25,6 +25,13 @@ final class TodayViewModel: ViewModel {
         self.useCase = useCase
     }
 
+    // Test
+    init() {
+        let repository = RealmRepository<Task>()
+        self.useCase = RealmTask(repository: repository)
+        let observable = useCase.history()
+    }
+
     func transform(input: Input) {
     }
 }
