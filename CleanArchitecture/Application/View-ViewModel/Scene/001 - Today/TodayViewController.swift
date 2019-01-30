@@ -40,7 +40,7 @@ final class TodayViewController: ViewController, View {
         Observable.of(dummyViewModels)
             .emptyDriverIfError()
             .drive(tableView.rx.items(cellIdentifier: "TaskCell", cellType: TaskCell.self)) { (_, viewModel, cell) in
-                cell.bind(viewModel)
+                cell.viewModel = viewModel
             }.disposed(by: bag)
     }
 }
@@ -64,7 +64,7 @@ extension TodayViewController {
                 progress.leftAnchor.constraint(equalTo: navBar.leftAnchor),
                 progress.rightAnchor.constraint(equalTo: navBar.rightAnchor),
                 progress.topAnchor.constraint(equalTo: navBar.bottomAnchor)
-                ])
+            ])
         }
         self.progress = progress
     }

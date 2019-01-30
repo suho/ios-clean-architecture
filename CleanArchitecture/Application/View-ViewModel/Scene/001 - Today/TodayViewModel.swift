@@ -7,10 +7,24 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 final class TodayViewModel: ViewModel {
 
-    var coordinator: TodayCoordinator?
+    struct Input {
+        let loadTrigger: Driver<Void>
+        let addTask: Driver<Void>
+        let doneTask: Driver<Task>
+    }
 
-    func transform(input: Void) {}
+    var coordinator: TodayCoordinator?
+    private let useCase: TaskUseCase
+
+    init(useCase: TaskUseCase) {
+        self.useCase = useCase
+    }
+
+    func transform(input: Input) {
+    }
 }

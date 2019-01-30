@@ -10,6 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol TaskCellDelegate {
+    func cell(_ cell: TaskCell, didSelectTask task: Task)
+}
+
 final class TaskCell: TableViewCell {
     @IBOutlet weak var verticalLineView: UIView!
     @IBOutlet weak var circleView: SView!
@@ -19,6 +23,12 @@ final class TaskCell: TableViewCell {
     @IBOutlet weak var checkedImageView: UIImageView!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var coverView: UIView!
+    var viewModel: TaskCellViewModel! {
+        didSet {
+            guard viewModel != nil else { return }
+            bind(viewModel)
+        }
+    }
 
     override func setupUI() {
         super.setupUI()
@@ -27,12 +37,9 @@ final class TaskCell: TableViewCell {
         setupDoneButton()
         setupCoverView()
         setupContent()
-        doneButton.rx.tap.subscribe(onNext: { _ in
-            print("tab")
-        }).disposed(by: bag)
     }
 
-    func bind(_ viewModel: TaskCellViewModel) {
+    private func bind(_ viewModel: TaskCellViewModel) {
         coverView.isHidden = !viewModel.isFinish
         checkedImageView.isHidden = !viewModel.isFinish
         if viewModel.isFinish {
@@ -42,6 +49,9 @@ final class TaskCell: TableViewCell {
         }
         titleLabel.text = viewModel.name
         timeLabel.text = viewModel.time
+        doneButton.rx.tap.subscribe(onNext: { _ in
+            print("tab")
+        }).disposed(by: bag)
     }
 }
 
