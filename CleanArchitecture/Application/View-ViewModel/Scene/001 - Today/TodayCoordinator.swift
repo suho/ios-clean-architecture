@@ -6,16 +6,22 @@
 //  Copyright © 2019 mlsuho. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class TodayCoordinator: Coordinate {
     var viewController: TodayViewController?
 
     func showScreen(_ screen: TodayCoordinator.Screen) {
         switch screen {
-        case .addTask: break
+        case .addTask:
+            let controller = addTaskController()
+            viewController?.present(controller, animated: true, completion: nil)
         case .detailTask: break
         }
+    }
+
+    private func addTaskController() -> UIViewController {
+        return NavigationController(rootViewController: AddTaskViewController())
     }
 }
 

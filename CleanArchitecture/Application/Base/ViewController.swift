@@ -12,6 +12,9 @@ import RxSwift
 class ViewController: UIViewController {
 
     let bag: DisposeBag = DisposeBag()
+    var navi: NavigationController? {
+        return navigationController as? NavigationController
+    }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

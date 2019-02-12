@@ -16,10 +16,11 @@ final class Task {
     var createdAt: Date
     var updatedAt: Date
     var isFinish: Bool
+    var isAlarm: Bool
     var noticeBefore: Seconds
 
     init(id: String = UUID().uuidString,
-         name: String, startAt: Date,
+         name: String, startAt: Date, isAlarm: Bool,
          createdAt: Date = Date(), updatedAt: Date = Date(),
          isFinish: Bool = false, noticeBefore: Seconds = 60) {
         self.id = id
@@ -28,6 +29,7 @@ final class Task {
         self.createdAt = createdAt
         self.updatedAt = updatedAt
         self.isFinish = isFinish
+        self.isAlarm = isAlarm
         self.noticeBefore = noticeBefore
     }
 }

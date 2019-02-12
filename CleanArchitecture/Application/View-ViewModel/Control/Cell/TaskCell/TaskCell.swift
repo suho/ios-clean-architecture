@@ -10,10 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol TaskCellDelegate: class {
-    func cell(_ cell: TaskCell, didSelectTask task: Task)
-}
-
 final class TaskCell: TableViewCell {
     @IBOutlet weak var verticalLineView: UIView!
     @IBOutlet weak var circleView: SView!
@@ -49,9 +45,6 @@ final class TaskCell: TableViewCell {
         }
         titleLabel.text = viewModel.name
         timeLabel.text = viewModel.time
-        doneButton.rx.tap.subscribe(onNext: { _ in
-            print("tab")
-        }).disposed(by: bag)
     }
 }
 

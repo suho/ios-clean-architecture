@@ -15,40 +15,46 @@ final class TabBarCoordinator: Coordinate {
     func showScreen(_ screen: TabBarCoordinator.Screen) {}
 
     func setupTabbar() {
-        let todayNavi = self.todayNavi()
-        let historyNavi = self.historyNavi()
-        let settingsNavi = self.settingsNavi()
+        let today = todayNavi()
+        let history = historyNavi()
+        let settings = settingsNavi()
 
         viewController?.viewControllers = [
-            todayNavi,
-            historyNavi,
-            settingsNavi
+            today,
+            history,
+            settings
         ]
     }
 
     private func todayNavi() -> UINavigationController {
-        let todayViewController = TodayViewController()
-        let todayNavigationController = NavigationController(rootViewController: todayViewController)
-        todayNavigationController.tabBarItem = UITabBarItem(title: App.String.today,
-                                                            image: App.Image.today,
-                                                            tag: 0)
-        return todayNavigationController
+        let controller = TodayViewController()
+        let repository = RealmRepository<Task>()
+        let useCase = RealmTask(repository: repository)
+        let coordinator = TodayCoordinator()
+        coordinator.viewController = controller
+        let viewModel = TodayViewModel(useCase: useCase, coordinator: coordinator)
+        controller.viewModel = viewModel
+        let navigationController = NavigationController(rootViewController: controller)
+        navigationController.tabBarItem = UITabBarItem(title: App.String.today,
+                                                       image: App.Image.today,
+                                                       tag: 0)
+        return navigationController
     }
 
     private func historyNavi() -> UINavigationController {
-        let historyViewController = HistoryViewController()
-        let historyNavigationController = NavigationController(rootViewController: historyViewController)
-        historyNavigationController.tabBarItem = UITabBarItem(title: App.String.history,
-                                                              image: App.Image.history,
-                                                              tag: 1)
-        return historyNavigationController
+        let controller = HistoryViewController()
+        let navigationController = NavigationController(rootViewController: controller)
+        navigationController.tabBarItem = UITabBarItem(title: App.String.history,
+                                                       image: App.Image.history,
+                                                       tag: 1)
+        return navigationController
     }
 
     private func settingsNavi() -> UINavigationController {
-        let settingsViewController = SettingsViewController()
-        let settingsNavigationController = NavigationController(rootViewController: settingsViewController)
-        settingsNavigationController.tabBarItem = UITabBarItem(title: App.String.settings, image: App.Image.settings, tag: 2)
-        return settingsNavigationController
+        let controller = SettingsViewController()
+        let navigationController = NavigationController(rootViewController: controller)
+        navigationController.tabBarItem = UITabBarItem(title: App.String.settings, image: App.Image.settings, tag: 2)
+        return navigationController
     }
 }
 

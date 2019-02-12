@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '11.0'
 
 def rx_swift
   pod 'RxSwift'
@@ -7,6 +7,7 @@ end
 
 def rx_cocoa
     pod 'RxCocoa'
+    pod 'RxDataSources'
 end
 
 def network_pods
@@ -33,6 +34,11 @@ def util_pods
     pod 'SVProgressHUD'
 end
 
+def firebase_pods
+    pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+end
+
 target 'CleanArchitecture' do
   use_frameworks!
   rx_swift
@@ -41,6 +47,7 @@ target 'CleanArchitecture' do
   database_pods
   dev_pods
   util_pods
+  firebase_pods
 
   target 'CleanArchitectureTests' do
     inherit! :search_paths

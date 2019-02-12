@@ -13,9 +13,9 @@ import RxSwift
 final class TodayViewController: ViewController, View {
     @IBOutlet weak var tableView: UITableView!
     weak var addButton: UIBarButtonItem!
-    weak var progress: UIProgressView!
 
     var viewModel: TodayViewModel!
+    let updateTask: PublishSubject<Task> = PublishSubject<Task>()
 
     override func setupUI() {
         super.setupUI()
@@ -25,23 +25,23 @@ final class TodayViewController: ViewController, View {
 
     override func bindViewModel() {
         super.bindViewModel()
-        addButton.rx.tap.subscribe(onNext: { _ in
-            print("tab")
-        }).disposed(by: bag)
-        let dummyViewModels: [TaskCellViewModel] = [
-            TaskCellViewModel(with: Task(name: "Do homework 1", startAt: Date(), isFinish: false)),
-            TaskCellViewModel(with: Task(name: "Do homework 3", startAt: Date(), isFinish: false)),
-            TaskCellViewModel(with: Task(name: "Do homework 6", startAt: Date(), isFinish: false)),
-            TaskCellViewModel(with: Task(name: "Do homework 7", startAt: Date(), isFinish: false)),
-            TaskCellViewModel(with: Task(name: "Do homework 4", startAt: Date(), isFinish: true)),
-            TaskCellViewModel(with: Task(name: "Do homework 2", startAt: Date(), isFinish: true)),
-            TaskCellViewModel(with: Task(name: "Do homework 5", startAt: Date(), isFinish: true))
-        ]
-        Observable.of(dummyViewModels)
-            .emptyDriverIfError()
-            .drive(tableView.rx.items(cellIdentifier: "TaskCell", cellType: TaskCell.self)) { (_, viewModel, cell) in
-                cell.viewModel = viewModel
-            }.disposed(by: bag)
+        let viewWillAppear = rx
+            .sentMessage(#selector(UIViewController.viewWillAppear(_:)))
+            .map { _ in return }.emptyDriverIfError()
+        let addTask = addButton.rx.tap.emptyDriverIfError()
+        let updateTask = self.updateTask.asObserver().emptyDriverIfError()
+        let input = TodayViewModel.Input(loadTrigger: viewWillAppear, addTrigger: addTask, updateTrigger: updateTask)
+        let output = viewModel.transform(input: input)
+        output.addTask.drive().disposed(by: bag)
+        output.taskViewModels.drive(tableView.rx.items(cellIdentifier: TaskCell.identify, cellType: TaskCell.self)) { (_, viewModel, cell) in
+            cell.viewModel = viewModel
+            cell.doneButton.rx
+                .tap
+                .asDriver()
+                .drive(onNext: { _ in print("test") })
+                .disposed(by: cell.bag)
+            }
+            .disposed(by: bag)
     }
 }
 
@@ -52,21 +52,7 @@ extension TodayViewController {
         let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
         navigationItem.rightBarButtonItem = button
         addButton = button
-
-        let progress = UIProgressView(progressViewStyle: .bar)
-        progress.translatesAutoresizingMaskIntoConstraints = false
-        progress.progress = 0.5
-        progress.backgroundColor = .black
-        if let navBar = navigationController?.navigationBar {
-            navBar.addSubview(progress)
-            NSLayoutConstraint.activate([
-                progress.heightAnchor.constraint(equalToConstant: 5),
-                progress.leftAnchor.constraint(equalTo: navBar.leftAnchor),
-                progress.rightAnchor.constraint(equalTo: navBar.rightAnchor),
-                progress.topAnchor.constraint(equalTo: navBar.bottomAnchor)
-            ])
-        }
-        self.progress = progress
+        navi?.isProgressHidden = false
     }
 
     private func setupTableView() {

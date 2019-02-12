@@ -75,6 +75,3 @@ vendor
 
 # Swiftlint
 swiftlint-report.json
-
-# Node Server
-node_modules
