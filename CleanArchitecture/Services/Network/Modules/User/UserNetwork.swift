@@ -17,11 +17,12 @@ final class UserNetwork: UserUseCase {
         self.router = router
     }
 
-    func me() -> Observable<User> {
-        return router.request(.me).map(User.self)
+    func profile() -> Observable<User> {
+        return router.request(.profile).map(User.self)
     }
+}
 
-    func register(username: String, avatar: String) -> Observable<User> {
-        return router.request(.register(username: username, avatar: avatar)).map(User.self)
-    }
+// MARK: - AuthURL
+extension UserNetwork {
+    static let authURL: String = "https://github.com/login/oauth/authorize"
 }

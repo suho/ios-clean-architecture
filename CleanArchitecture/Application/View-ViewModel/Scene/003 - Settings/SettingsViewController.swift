@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SafariServices
-import Firebase
 
 final class SettingsViewController: ViewController, View {
 
@@ -17,13 +15,11 @@ final class SettingsViewController: ViewController, View {
     override func setupUI() {
         super.setupUI()
         title = App.String.settings
-        if let url = URL(string: "https://github.com/login/oauth/authorize?client_id=49730bf0294929517d82") {
-            let controller = SFSafariViewController(url: url)
-            tabBarController?.present(controller, animated: true, completion: nil)
+        guard var components = URLComponents(string: UserNetwork.authURL) else { return }
+        let queryItems: [URLQueryItem] = [URLQueryItem(name: App.Key.Github.clientIdKey, value: App.Key.Github.clientIdValue)]
+        components.queryItems = queryItems
+        if let url = components.url {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
-}
-
-// MARK: - SFSafariViewControllerDelegate
-extension SettingsViewController: SFSafariViewControllerDelegate {
 }

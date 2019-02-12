@@ -10,6 +10,5 @@ import Foundation
 import RxSwift
 
 protocol UserUseCase {
-    func me() -> Observable<User>
-    func register(username: String, avatar: String) -> Observable<User>
+    func profile() -> Observable<User>
 }

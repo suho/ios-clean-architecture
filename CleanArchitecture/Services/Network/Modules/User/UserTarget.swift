@@ -10,8 +10,7 @@ import Foundation
 import Alamofire
 
 enum UserTarget {
-    case register(username: String, avatar: String)
-    case me
+    case profile
 }
 
 // MARK: - TargetType
@@ -22,31 +21,21 @@ extension UserTarget: TargetType {
 
     var path: String {
         switch self {
-        case .register:
+        case .profile:
             return ""
-        case .me:
-            return "/me"
         }
     }
 
     var method: HTTPMethod {
         switch self {
-        case .register:
-            return .post
-        case .me:
+        case .profile:
             return .get
         }
     }
 
     var task: HTTPTask {
         switch self {
-        case .register(let username, let avatar):
-            let params: Parameters = [
-                "username": username,
-                "avatar": avatar
-            ]
-            return .requestParameters(params: params, encoding: URLEncoding.default)
-        case .me:
+        case .profile:
             return .requestPlain
         }
     }

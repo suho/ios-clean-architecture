@@ -20,4 +20,13 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         return true
     }
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        let message = url.absoluteString
+        let alertController = UIAlertController(title: "Incoming Message", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        window?.rootViewController?.present(alertController, animated: true, completion: nil)
+        return true
+    }
 }
