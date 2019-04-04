@@ -64,7 +64,6 @@
 		43682B1A21C6A9B900716C2C /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B1921C6A9B900716C2C /* Application.swift */; };
 		43682B3921C6B28B00716C2C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3821C6B28B00716C2C /* App.swift */; };
 		43682B3C21C6B38B00716C2C /* App.String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43682B3B21C6B38B00716C2C /* App.String.swift */; };
-		4380850E22129B7900E7A0FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4380850D22129B7900E7A0FC /* GoogleService-Info.plist */; };
 		438085102212EE0A00E7A0FC /* App.Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4380850F2212EE0A00E7A0FC /* App.Key.swift */; };
 		439809ED21CB9DF100E05C14 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809EB21CB9DF100E05C14 /* UserTarget.swift */; };
 		439809EE21CB9DF100E05C14 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809EC21CB9DF100E05C14 /* UserNetwork.swift */; };
@@ -153,7 +152,6 @@
 		43682B1921C6A9B900716C2C /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		43682B3821C6B28B00716C2C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		43682B3B21C6B38B00716C2C /* App.String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.String.swift; sourceTree = "<group>"; };
-		4380850D22129B7900E7A0FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4380850F2212EE0A00E7A0FC /* App.Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.Key.swift; sourceTree = "<group>"; };
 		439809EB21CB9DF100E05C14 /* UserTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTarget.swift; sourceTree = "<group>"; };
 		439809EC21CB9DF100E05C14 /* UserNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
@@ -421,7 +419,6 @@
 		43682B1121C6A8C900716C2C /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				4380850D22129B7900E7A0FC /* GoogleService-Info.plist */,
 				4353C68921C6A3F200A824DD /* Info.plist */,
 			);
 			path = Support;
@@ -677,7 +674,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4353C68821C6A3F200A824DD /* LaunchScreen.storyboard in Resources */,
-				4380850E22129B7900E7A0FC /* GoogleService-Info.plist in Resources */,
 				4353C68521C6A3F200A824DD /* Assets.xcassets in Resources */,
 				435A7FB821EF78930014D01F /* TodayViewController.xib in Resources */,
 				43EB31652204B45100555451 /* AddTaskViewController.xib in Resources */,
@@ -770,8 +766,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -782,7 +776,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -790,8 +783,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -802,7 +793,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

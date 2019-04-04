@@ -7,19 +7,12 @@
 //
 
 import UIKit
-import Firebase
 
 final class Application {
     static let current = Application()
     var coodinator: RootCoordinator?
 
-    private init() {
-        setupFirebase()
-    }
-
-    private func setupFirebase() {
-        FirebaseApp.configure()
-    }
+    private init() {}
 
     func root(in window: UIWindow?) {
         let coodinator = RootCoordinator()
