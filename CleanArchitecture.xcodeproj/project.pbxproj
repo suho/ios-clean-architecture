@@ -68,6 +68,8 @@
 		439809ED21CB9DF100E05C14 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809EB21CB9DF100E05C14 /* UserTarget.swift */; };
 		439809EE21CB9DF100E05C14 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809EC21CB9DF100E05C14 /* UserNetwork.swift */; };
 		439809F121CB9E7700E05C14 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439809F021CB9E7700E05C14 /* UserUseCase.swift */; };
+		439E9DAD2256571D007AF95C /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E9DAC2256571D007AF95C /* AddTaskViewModel.swift */; };
+		439E9DAF22565747007AF95C /* AddTaskCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E9DAE22565747007AF95C /* AddTaskCoordinator.swift */; };
 		43C2452421CFDDD000EEE203 /* ModelConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2451E21CFDDD000EEE203 /* ModelConvertibleType.swift */; };
 		43C2452521CFDDD000EEE203 /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2451F21CFDDD000EEE203 /* RealmError.swift */; };
 		43C2452621CFDDD000EEE203 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2452021CFDDD000EEE203 /* RealmRepresentable.swift */; };
@@ -156,6 +158,8 @@
 		439809EB21CB9DF100E05C14 /* UserTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTarget.swift; sourceTree = "<group>"; };
 		439809EC21CB9DF100E05C14 /* UserNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
 		439809F021CB9E7700E05C14 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
+		439E9DAC2256571D007AF95C /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
+		439E9DAE22565747007AF95C /* AddTaskCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskCoordinator.swift; sourceTree = "<group>"; };
 		43C2451E21CFDDD000EEE203 /* ModelConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelConvertibleType.swift; sourceTree = "<group>"; };
 		43C2451F21CFDDD000EEE203 /* RealmError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
 		43C2452021CFDDD000EEE203 /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
@@ -570,6 +574,8 @@
 			children = (
 				43EB31622204B45100555451 /* AddTaskViewController.swift */,
 				43EB31632204B45100555451 /* AddTaskViewController.xib */,
+				439E9DAC2256571D007AF95C /* AddTaskViewModel.swift */,
+				439E9DAE22565747007AF95C /* AddTaskCoordinator.swift */,
 			);
 			path = "005 - AddTask";
 			sourceTree = "<group>";
@@ -876,9 +882,11 @@
 				4310636521EDBCF90088BB14 /* UIColor.swift in Sources */,
 				435A7FB721EF78930014D01F /* TodayViewController.swift in Sources */,
 				435A7FE221F009B10014D01F /* TaskCellViewModel.swift in Sources */,
+				439E9DAF22565747007AF95C /* AddTaskCoordinator.swift in Sources */,
 				435A7FBB21EF78A10014D01F /* HistoryViewController.swift in Sources */,
 				4310635A21EDA5C40088BB14 /* RTask.swift in Sources */,
 				435A7FC921EF8D9F0014D01F /* Settings.swift in Sources */,
+				439E9DAD2256571D007AF95C /* AddTaskViewModel.swift in Sources */,
 				435A7FE021F009530014D01F /* TableViewCell.swift in Sources */,
 				433BCADE21C7F0000098DCF8 /* Router.swift in Sources */,
 				435A7FE421F00B130014D01F /* View.swift in Sources */,

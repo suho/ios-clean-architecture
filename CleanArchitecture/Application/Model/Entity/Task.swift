@@ -7,7 +7,6 @@
 //
 
 import Foundation
-typealias Seconds = Double
 
 final class Task {
     let id: String
@@ -16,20 +15,16 @@ final class Task {
     var createdAt: Date
     var updatedAt: Date
     var isFinish: Bool
-    var isAlarm: Bool
-    var noticeBefore: Seconds
 
     init(id: String = UUID().uuidString,
-         name: String, startAt: Date, isAlarm: Bool,
+         name: String, startAt: Date,
          createdAt: Date = Date(), updatedAt: Date = Date(),
-         isFinish: Bool = false, noticeBefore: Seconds = 60) {
+         isFinish: Bool = false) {
         self.id = id
         self.name = name
         self.startAt = startAt
         self.createdAt = createdAt
         self.updatedAt = updatedAt
         self.isFinish = isFinish
-        self.isAlarm = isAlarm
-        self.noticeBefore = noticeBefore
     }
 }

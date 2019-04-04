@@ -21,7 +21,15 @@ final class TodayCoordinator: Coordinate {
     }
 
     private func addTaskController() -> UIViewController {
-        return NavigationController(rootViewController: AddTaskViewController())
+        let controller = AddTaskViewController()
+        let repository = RealmRepository<Task>()
+        let useCase = RealmTask(repository: repository)
+        let coordinator = AddTaskCoordinator()
+        coordinator.viewController = controller
+        let viewModel = AddTaskViewModel(useCase: useCase, coordinator: coordinator)
+        controller.viewModel = viewModel
+        let navigationController = NavigationController(rootViewController: controller)
+        return navigationController
     }
 }
 

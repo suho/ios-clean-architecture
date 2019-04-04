@@ -17,8 +17,6 @@ final class RTask: Object {
     @objc dynamic var createdAt: Date = Date()
     @objc dynamic var updatedAt: Date = Date()
     @objc dynamic var isFinish: Bool = false
-    @objc dynamic var isAlarm: Bool = false
-    @objc dynamic var noticeBefore: Seconds = 0
 
     override class func primaryKey() -> String? {
         return "id"
@@ -28,9 +26,9 @@ final class RTask: Object {
 // MARK: - ModelConvertibleType
 extension RTask: ModelConvertibleType {
     func asModel() -> Task {
-        return Task(id: id, name: name, startAt: startAt, isAlarm: isAlarm,
+        return Task(id: id, name: name, startAt: startAt,
                     createdAt: createdAt, updatedAt: updatedAt,
-                    isFinish: isFinish, noticeBefore: noticeBefore)
+                    isFinish: isFinish)
     }
 }
 
@@ -48,8 +46,6 @@ extension Task: RealmRepresentable {
             $0.createdAt = createdAt
             $0.updatedAt = updatedAt
             $0.isFinish = isFinish
-            $0.isAlarm = isAlarm
-            $0.noticeBefore = noticeBefore
         }
     }
 }

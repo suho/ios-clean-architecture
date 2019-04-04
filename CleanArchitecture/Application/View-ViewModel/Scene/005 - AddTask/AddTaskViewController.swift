@@ -12,20 +12,27 @@ import RxCocoa
 
 final class AddTaskViewController: ViewController {
 
+    @IBOutlet weak var timePicker: UIDatePicker!
+    @IBOutlet weak var nameTextField: UITextField!
     weak var cancelButton: UIBarButtonItem!
     weak var saveButton: UIBarButtonItem!
+
+    var viewModel: AddTaskViewModel!
 
     override func setupUI() {
         super.setupUI()
         setupBackground()
         setupNavi()
+        setupTimePicker()
+        setupTextField()
     }
 
     override func bindViewModel() {
         super.bindViewModel()
-        cancelButton.rx.tap.asDriver().drive(onNext: { _ in
-            self.dismiss(animated: true, completion: nil)
-        }).disposed(by: bag)
+        let cancel = cancelButton.rx.tap.emptyDriverIfError()
+        let input = AddTaskViewModel.Input(cancelTrigger: cancel)
+        let output = viewModel.transform(input: input)
+        output.cancel.drive().disposed(by: bag)
     }
 }
 
@@ -45,5 +52,22 @@ extension AddTaskViewController {
         let rightButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: nil)
         navigationItem.rightBarButtonItem = rightButton
         saveButton = rightButton
+    }
+
+    private func setupTimePicker() {
+        timePicker.minimumDate = Date()
+        timePicker.setValue(UIColor.white, forKey: "textColor")
+    }
+
+    private func setupTextField() {
+        nameTextField.delegate = self
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension AddTaskViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
 }
