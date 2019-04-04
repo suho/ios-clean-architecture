@@ -10,4 +10,5 @@ import Foundation
 
 enum RealmError: Error {
     case notFound
+    case system
 }

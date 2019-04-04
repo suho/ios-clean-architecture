@@ -10,4 +10,5 @@ import Foundation
 
 enum NetworkError: Error {
     case json
+    case offline
 }

@@ -14,16 +14,19 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    static let shared: AppDelegate = {
-        guard let delegate = UIApplication.shared.delegate as? AppDelegate else { fatalError() }
-        return delegate
-    }()
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        Application.shared.auth(in: window)
-        window.makeKeyAndVisible()
-        self.window = window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        Application.current.root(in: window)
+        window?.makeKeyAndVisible()
+        return true
+    }
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        let message = url.absoluteString
+        let alertController = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        window?.rootViewController?.present(alertController, animated: true, completion: nil)
         return true
     }
 }

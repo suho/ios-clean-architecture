@@ -11,17 +11,12 @@ import RxSwift
 import RxCocoa
 import SVProgressHUD
 
-final class RxIndicator: SharedSequenceConvertibleType {
-    typealias SharingStrategy = DriverSharingStrategy
+final class RxIndicator: ObservableConvertibleType {
     private let _relay = BehaviorRelay(value: false)
-    private let _loading: SharedSequence<SharingStrategy, Bool>
+    private let _loading: Observable<Bool>
 
     init() {
-        _loading = _relay.asDriver().distinctUntilChanged()
-    }
-
-    func asSharedSequence() -> SharedSequence<SharingStrategy, Bool> {
-        return _loading
+        _loading = _relay.distinctUntilChanged()
     }
 
     func asObservable() -> Observable<Bool> {

@@ -10,16 +10,11 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class RxError: SharedSequenceConvertibleType {
-    typealias SharingStrategy = DriverSharingStrategy
+final class RxError: ObservableConvertibleType {
     private let _subject = PublishSubject<Error>()
 
     deinit {
         _subject.onCompleted()
-    }
-
-    func asSharedSequence() -> SharedSequence<SharingStrategy, Error> {
-        return _subject.asObservable().emptyDriverIfError()
     }
 
     func asObservable() -> Observable<Error> {
@@ -27,11 +22,9 @@ final class RxError: SharedSequenceConvertibleType {
     }
 
     fileprivate func track<O: ObservableConvertibleType>(from source: O) -> Observable<O.E> {
-        return source.asObservable().do(onError: onError)
-    }
-
-    private func onError(_ error: Error) {
-        _subject.onNext(error)
+        return source.asObservable().do(onError: { error in
+            self._subject.onNext(error)
+        })
     }
 }
 

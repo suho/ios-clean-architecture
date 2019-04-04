@@ -18,16 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github-logo" translatesAutoresizingMaskIntoConstraints="NO" id="zCZ-gD-cCY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-splash" translatesAutoresizingMaskIntoConstraints="NO" id="TRf-9A-q4M">
+                                <rect key="frame" x="-15" y="191.5" width="405" height="304"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zCZ-gD-cCY" secondAttribute="bottom" id="SUY-7g-z0h"/>
-                            <constraint firstItem="zCZ-gD-cCY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yvz-o3-Dt9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zCZ-gD-cCY" secondAttribute="trailing" id="i3w-hn-EoF"/>
-                            <constraint firstItem="zCZ-gD-cCY" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="zYI-ph-fid"/>
+                            <constraint firstItem="TRf-9A-q4M" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8nj-sv-YFu"/>
+                            <constraint firstItem="TRf-9A-q4M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Jaj-WQ-NLx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="github-logo" width="1200" height="1200"/>
+        <image name="img-splash" width="405.5" height="304"/>
     </resources>
 </document>

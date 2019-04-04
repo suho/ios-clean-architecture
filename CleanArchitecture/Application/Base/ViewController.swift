@@ -12,6 +12,9 @@ import RxSwift
 class ViewController: UIViewController {
 
     let bag: DisposeBag = DisposeBag()
+    var navi: NavigationController? {
+        return navigationController as? NavigationController
+    }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -19,11 +22,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindViewModel()
         setupUI()
+        bindViewModel()
     }
 
     func bindViewModel() {}
 
-    func setupUI() {}
+    func setupUI() {
+        view.backgroundColor = App.Theme.current.package.viewBackground
+    }
 }
