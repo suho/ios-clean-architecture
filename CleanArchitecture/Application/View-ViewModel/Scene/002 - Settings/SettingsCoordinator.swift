@@ -12,15 +12,11 @@ final class SettingsCoordinator: Coordinate {
     var viewController: SettingsViewController?
 
     func showScreen(_ screen: SettingsCoordinator.Screen) {
-        switch screen {
-        case .theme: break
-        }
+        switch screen {}
     }
 }
 
 // MARK: - Screen
 extension SettingsCoordinator {
-    enum Screen {
-        case theme
-    }
+    enum Screen {}
 }

@@ -1,5 +1,5 @@
 //
-//  HistoryViewController.swift
+//  SettingsViewController.swift
 //  CleanArchitecture
 //
 //  Created by Su Ho V. on 1/16/19.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-final class HistoryViewController: ViewController, View {
+final class SettingsViewController: ViewController, View {
 
-    var viewModel: HistoryViewModel!
+    var viewModel: SettingsViewModel!
 
     override func setupUI() {
         super.setupUI()
-        title = App.String.history
+        title = App.String.settings
     }
 }

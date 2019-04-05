@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  InfoUseCase.swift
 //  CleanArchitecture
 //
 //  Created by Su Ho V. on 12/20/18.
@@ -9,6 +9,6 @@
 import Foundation
 import RxSwift
 
-protocol UserUseCase {
-    func profile() -> Observable<User>
+protocol InfoUseCase {
+    func about() -> Observable<Info>
 }

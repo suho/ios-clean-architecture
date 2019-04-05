@@ -16,12 +16,10 @@ final class TabBarCoordinator: Coordinate {
 
     func setupTabbar() {
         let today = todayNavi()
-        let history = historyNavi()
         let settings = settingsNavi()
 
         viewController?.viewControllers = [
             today,
-            history,
             settings
         ]
     }
@@ -41,15 +39,6 @@ final class TabBarCoordinator: Coordinate {
         return navigationController
     }
 
-    private func historyNavi() -> UINavigationController {
-        let controller = HistoryViewController()
-        let navigationController = NavigationController(rootViewController: controller)
-        navigationController.tabBarItem = UITabBarItem(title: App.String.history,
-                                                       image: App.Image.history,
-                                                       tag: 1)
-        return navigationController
-    }
-
     private func settingsNavi() -> UINavigationController {
         let controller = SettingsViewController()
         let navigationController = NavigationController(rootViewController: controller)
@@ -62,7 +51,6 @@ final class TabBarCoordinator: Coordinate {
 extension TabBarCoordinator {
     enum Screen {
         case today
-        case history
         case settings
     }
 }

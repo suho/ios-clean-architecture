@@ -40,10 +40,6 @@ final class RealmTask<R: Repository>: TaskUseCase where R.Entity == Task {
         return repository.find(with: predicate, sortDescriptors: sortDescriptors)
     }
 
-    func history() -> Observable<[Task]> {
-        return repository.findAll()
-    }
-
     func find(by id: String) -> Observable<Task?> {
         let predicate = NSPredicate(format: "id = %@", argumentArray: [id])
         return repository.find(with: predicate, sortDescriptors: []).map({ tasks -> Task? in

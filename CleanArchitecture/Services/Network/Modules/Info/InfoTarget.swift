@@ -1,41 +1,41 @@
 //
-//  AuthTarget.swift
+//  InfoTarget.swift
 //  CleanArchitecture
 //
-//  Created by Su Ho V. on 12/18/18.
-//  Copyright © 2018 mlsuho. All rights reserved.
+//  Created by Su Ho V. on 4/6/19.
+//  Copyright © 2019 mlsuho. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-enum UserTarget {
-    case profile
+enum InfoTarget {
+    case about
 }
 
 // MARK: - TargetType
-extension UserTarget: TargetType {
+extension InfoTarget: TargetType {
     var baseURL: String {
-        return "http://localhost:8000/users"
+        return "https://raw.githubusercontent.com/suho/ios-clean-architecture/master/api"
     }
 
     var path: String {
         switch self {
-        case .profile:
-            return ""
+        case .about:
+            return "about.json"
         }
     }
 
     var method: HTTPMethod {
         switch self {
-        case .profile:
+        case .about:
             return .get
         }
     }
 
     var task: HTTPTask {
         switch self {
-        case .profile:
+        case .about:
             return .requestPlain
         }
     }
