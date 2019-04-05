@@ -22,7 +22,7 @@ final class TaskCell: TableViewCell {
     var viewModel: TaskCellViewModel! {
         didSet {
             guard viewModel != nil else { return }
-            bind(viewModel)
+            self.bind(self.viewModel)
         }
     }
 
@@ -58,12 +58,14 @@ extension TaskCell {
         circleView.fillColor = App.Theme.current.package.taskCellActiveCircle
         circleView.borderColor = App.Theme.current.package.taskCellActiveCircle
         circleView.shadowColor = App.Theme.current.package.taskCellActiveCircle
+        circleView.setNeedsDisplay()
     }
 
     private func setupInactiveCirleView() {
         circleView.fillColor = App.Theme.current.package.taskCellInactiveCircle
         circleView.borderColor = App.Theme.current.package.taskCellInactiveCircle
         circleView.shadowColor = App.Theme.current.package.taskCellInactiveCircle
+        circleView.setNeedsDisplay()
     }
 
     private func setupText() {

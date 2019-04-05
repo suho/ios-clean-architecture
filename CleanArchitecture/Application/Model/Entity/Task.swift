@@ -27,4 +27,8 @@ final class Task {
         self.updatedAt = updatedAt
         self.isFinish = isFinish
     }
+
+    func updateStatus(_ status: Bool = true) {
+        isFinish = status
+    }
 }

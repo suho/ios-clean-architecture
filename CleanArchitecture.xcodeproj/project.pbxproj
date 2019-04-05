@@ -76,6 +76,7 @@
 		43C2452721CFDDD000EEE203 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2452121CFDDD000EEE203 /* Reactive.swift */; };
 		43C2452821CFDDD000EEE203 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2452221CFDDD000EEE203 /* Object.swift */; };
 		43C2452921CFDDD000EEE203 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2452321CFDDD000EEE203 /* RealmRepository.swift */; };
+		43C6042022579FFA00792226 /* RxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C6041F22579FFA00792226 /* RxExtension.swift */; };
 		43EB31602204A8B600555451 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB315F2204A8B600555451 /* UITableViewCell.swift */; };
 		43EB31642204B45100555451 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB31622204B45100555451 /* AddTaskViewController.swift */; };
 		43EB31652204B45100555451 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43EB31632204B45100555451 /* AddTaskViewController.xib */; };
@@ -166,6 +167,7 @@
 		43C2452121CFDDD000EEE203 /* Reactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
 		43C2452221CFDDD000EEE203 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		43C2452321CFDDD000EEE203 /* RealmRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
+		43C6041F22579FFA00792226 /* RxExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxExtension.swift; sourceTree = "<group>"; };
 		43EB315F2204A8B600555451 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		43EB31622204B45100555451 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		43EB31632204B45100555451 /* AddTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskViewController.xib; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				4307934021C9D80D003C5BF0 /* RxError.swift */,
 				4307934621C9ECB5003C5BF0 /* RxIndicator.swift */,
 				4307933E21C9D7D7003C5BF0 /* UIImageView+Rx.swift */,
+				43C6041F22579FFA00792226 /* RxExtension.swift */,
 			);
 			path = Reactive;
 			sourceTree = "<group>";
@@ -891,6 +894,7 @@
 				433BCADE21C7F0000098DCF8 /* Router.swift in Sources */,
 				435A7FE421F00B130014D01F /* View.swift in Sources */,
 				4353C67E21C6A3F100A824DD /* AppDelegate.swift in Sources */,
+				43C6042022579FFA00792226 /* RxExtension.swift in Sources */,
 				435A7FB221EF70BE0014D01F /* RootCoordinator.swift in Sources */,
 				43EB31642204B45100555451 /* AddTaskViewController.swift in Sources */,
 				435A7FCD21EF900A0014D01F /* TodayCoordinator.swift in Sources */,

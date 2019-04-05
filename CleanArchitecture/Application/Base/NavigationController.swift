@@ -36,7 +36,7 @@ final class NavigationController: UINavigationController {
         } else {
             let progress = UIProgressView(progressViewStyle: .bar)
             progress.translatesAutoresizingMaskIntoConstraints = false
-            progress.progress = 0.5
+            progress.progress = 0
             progress.backgroundColor = .black
             navigationBar.addSubview(progress)
             NSLayoutConstraint.activate([

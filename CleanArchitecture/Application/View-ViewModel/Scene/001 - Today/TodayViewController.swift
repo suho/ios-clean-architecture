@@ -15,7 +15,7 @@ final class TodayViewController: ViewController, View {
     weak var addButton: UIBarButtonItem!
 
     var viewModel: TodayViewModel!
-    let updateTask: PublishSubject<Task> = PublishSubject<Task>()
+    let updateTask: PublishSubject<TaskCellViewModel> = PublishSubject<TaskCellViewModel>()
 
     override func setupUI() {
         super.setupUI()
@@ -30,18 +30,24 @@ final class TodayViewController: ViewController, View {
             .map { _ in return }.emptyDriverIfError()
         let addTask = addButton.rx.tap.emptyDriverIfError()
         let updateTask = self.updateTask.asObserver().emptyDriverIfError()
-        let input = TodayViewModel.Input(loadTrigger: viewWillAppear, addTrigger: addTask, updateTrigger: updateTask)
+        let deleteTrigger = tableView.rx.itemDeleted.asDriver()
+        let input = TodayViewModel.Input(loadTrigger: viewWillAppear, addTrigger: addTask, updateTrigger: updateTask, deleteTrigger: deleteTrigger)
         let output = viewModel.transform(input: input)
         output.addTask.drive().disposed(by: bag)
+        output.updateTask.drive().disposed(by: bag)
+        if let navi = navi {
+            output.progress.drive(navi.progress.rx.progress).disposed(by: bag)
+        }
         output.taskViewModels.drive(tableView.rx.items(cellIdentifier: TaskCell.identify, cellType: TaskCell.self)) { (_, viewModel, cell) in
             cell.viewModel = viewModel
-            cell.doneButton.rx
-                .tap
-                .asDriver()
-                .drive(onNext: { _ in print("test") })
+            cell.doneButton.rx.tap.asDriver().debounce(0.4)
+                .drive(onNext: { _ in
+                    self.updateTask.onNext(viewModel)
+                })
                 .disposed(by: cell.bag)
             }
             .disposed(by: bag)
+        output.delete.drive().disposed(by: bag)
     }
 }
 
@@ -57,7 +63,7 @@ extension TodayViewController {
 
     private func setupTableView() {
         tableView.backgroundColor = App.Theme.current.package.viewBackground
-        tableView.register(UINib(nibName: "TaskCell", bundle: nil), forCellReuseIdentifier: "TaskCell")
+        tableView.register(UINib(nibName: TaskCell.identify, bundle: nil), forCellReuseIdentifier: TaskCell.identify)
         tableView.rowHeight = 80
         tableView.tableFooterView = UIView()
     }

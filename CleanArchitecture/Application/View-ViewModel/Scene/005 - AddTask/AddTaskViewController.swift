@@ -29,10 +29,14 @@ final class AddTaskViewController: ViewController {
 
     override func bindViewModel() {
         super.bindViewModel()
-        let cancel = cancelButton.rx.tap.emptyDriverIfError()
-        let input = AddTaskViewModel.Input(cancelTrigger: cancel)
+        let save = saveButton.rx.tap.asDriver()
+        let cancel = cancelButton.rx.tap.asDriver()
+        let time = timePicker.rx.date.asDriver()
+        let name = nameTextField.rx.text.orEmpty.asDriver()
+        let input = AddTaskViewModel.Input(cancelTrigger: cancel, saveTrigger: save, time: time, name: name)
         let output = viewModel.transform(input: input)
         output.cancel.drive().disposed(by: bag)
+        output.save.drive().disposed(by: bag)
     }
 }
 

@@ -12,10 +12,12 @@ final class TaskCellViewModel {
     let name: String
     let time: String
     let isFinish: Bool
+    let taskId: String
 
     init(with task: Task) {
         name = task.name
         time = DateFormatter.hour.string(from: task.startAt)
         isFinish = task.isFinish
+        taskId = task.id
     }
 }

@@ -14,4 +14,6 @@ protocol TaskUseCase {
     func update(_ task: Task) -> Observable<Task>
     func today() -> Observable<[Task]>
     func history() -> Observable<[Task]>
+    func find(by id: String) -> Observable<Task?>
+    func delete(_ task: Task) -> Observable<Void>
 }
