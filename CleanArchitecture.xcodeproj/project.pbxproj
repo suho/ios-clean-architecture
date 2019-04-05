@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		37824278A1758B22FE302C2B /* Pods_CleanArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782273A712D21DC25C665C73 /* Pods_CleanArchitectureTests.framework */; };
-		4307933F21C9D7D7003C5BF0 /* UIImageView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307933E21C9D7D7003C5BF0 /* UIImageView+Rx.swift */; };
 		4307934121C9D80D003C5BF0 /* RxError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934021C9D80D003C5BF0 /* RxError.swift */; };
 		4307934321C9DA6C003C5BF0 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934221C9DA6C003C5BF0 /* Driver.swift */; };
 		4307934521C9E393003C5BF0 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307934421C9E393003C5BF0 /* Coordinate.swift */; };
@@ -91,7 +90,6 @@
 
 /* Begin PBXFileReference section */
 		36A681191E9522F67040C5B4 /* Pods_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4307933E21C9D7D7003C5BF0 /* UIImageView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Rx.swift"; sourceTree = "<group>"; };
 		4307934021C9D80D003C5BF0 /* RxError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxError.swift; sourceTree = "<group>"; };
 		4307934221C9DA6C003C5BF0 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		4307934421C9E393003C5BF0 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 				4307934221C9DA6C003C5BF0 /* Driver.swift */,
 				4307934021C9D80D003C5BF0 /* RxError.swift */,
 				4307934621C9ECB5003C5BF0 /* RxIndicator.swift */,
-				4307933E21C9D7D7003C5BF0 /* UIImageView+Rx.swift */,
 				43C6041F22579FFA00792226 /* RxExtension.swift */,
 			);
 			path = Reactive;
@@ -753,14 +750,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -770,14 +764,11 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -846,7 +837,6 @@
 				433BCAE821C7F0B50098DCF8 /* JSONDecoder.swift in Sources */,
 				4307934321C9DA6C003C5BF0 /* Driver.swift in Sources */,
 				43C2452521CFDDD000EEE203 /* RealmError.swift in Sources */,
-				4307933F21C9D7D7003C5BF0 /* UIImageView+Rx.swift in Sources */,
 				4307934721C9ECB5003C5BF0 /* RxIndicator.swift in Sources */,
 				4307934121C9D80D003C5BF0 /* RxError.swift in Sources */,
 				435A7FD421EF92C20014D01F /* SettingsViewModel.swift in Sources */,

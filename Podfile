@@ -9,7 +9,6 @@ end
 
 def rx_cocoa
     pod 'RxCocoa'
-    pod 'RxDataSources'
 end
 
 def network_pods
@@ -32,7 +31,6 @@ def test_pods
 end
 
 def util_pods
-    pod 'Kingfisher'
     pod 'SVProgressHUD'
 end
 
