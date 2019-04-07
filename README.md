@@ -1,5 +1,5 @@
 # ios-clean-architecture
-![Build Status](https://travis-ci.org/suho/ios-clean-architecture.svg?branch=master)
+[![Build Status][travis-img]][travis-url]
 
 This project contains documents and example of clean architecture of iOS application based on **MVVM-C** and **RxSwift**
 
