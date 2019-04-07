@@ -21,15 +21,196 @@ This project contains documents and example of clean architecture of iOS applica
 
 ![Clean Architecture][image-4]
 
+#### Application
+
+**Application** is responsible for delivering information to the user and handling user input. This application implemented with MVVM-C. This is place for your **View**s, **ViewModel**s, **Model**s and **Coordinator**s.
+
+In the current example, **Application** is implemented with **MVVM-C** and use **RxSwift**.
+
+First of all, **Model** defines `Entity` and `UseCase` of the application.
+
+```swift
+final class Task {
+    let id: String
+    var name: String
+    var startAt: Date
+    var createdAt: Date
+    var updatedAt: Date
+    var isFinish: Bool
+}
+```
+
+```swift
+protocol TaskUseCase {
+    func add(_ task: Task) -> Observable<Task>
+    func update(_ task: Task) -> Observable<Task>
+    func today() -> Observable<[Task]>
+    func find(by id: String) -> Observable<Task?>
+    func delete(_ task: Task) -> Observable<Void>
+}
+```
+
+`View` contains `ViewModel` and `ViewModel` performs pure transformation of a user `Input` to the `Output`
+
+```swift
+protocol View {
+    associatedtype ViewModelType: ViewModel
+    var viewModel: ViewModelType! { get set }
+}
+
+protocol ViewModel {
+    associatedtype Input
+    associatedtype Output
+    associatedtype CoordinatorType: Coordinate
+
+    var coordinator: CoordinatorType? { get set }
+
+    func transform(input: Input) -> Output
+}
+```
+
+A `Model` (Entity, UseCase) can be injected/initializer into a `ViewModel` and a `ViewModel` also can be injected into a `ViewController` (View) via property injection or initializer. This is done by `Coordinator`.
+
+```swift
+protocol Coordinate {
+    associatedtype Screen
+    associatedtype View: UIViewController
+
+    var viewController: View? { get set }
+}
+```
+
+`Coordinator` also contains navigation logic for describing which screens are shown in which order.
+
+```swift
+// View
+final class TodayViewController: ViewController, View {
+  var viewModel: TodayViewModel!
+
+  override func bindViewModel() {
+        super.bindViewModel()
+        // Magic here
+    }
+}
+```
+
+```swift
+// ViewModel
+final class TodayViewModel: ViewModel {
+    struct Input {
+        let loadTrigger: Driver<Void>
+        let addTrigger: Driver<Void>
+        let updateTrigger: Driver<TaskCellViewModel>
+        let deleteTrigger: Driver<IndexPath>
+    }
+
+    struct Output {
+        let taskViewModels: Driver<[TaskCellViewModel]>
+        let addTask: Driver<Void>
+        let updateTask: Driver<Void>
+        let progress: Driver<Float>
+        let delete: Driver<Void>
+    }
+
+    var coordinator: TodayCoordinator?
+    private let useCase: TaskUseCase
+
+    // Inject Model (UseCase) here
+    init(useCase: TaskUseCase, coordinator: TodayCoordinator) {
+        self.useCase = useCase
+        self.coordinator = coordinator
+    }
+
+    func transform(input: Input) -> Output {
+        // Magic here
+    }
+}
+```
+
+```swift
+final class TabBarCoordinator: Coordinate {
+
+    weak var viewController: TabBarController?
+
+    func showScreen(_ screen: TabBarCoordinator.Screen) {}
+
+    private func todayNavi() -> UINavigationController {
+        // View
+        let controller = TodayViewController()
+
+        // Implement UseCase
+        let repository = RealmRepository<Task>()
+        let useCase = RealmTask(repository: repository)
+
+        // Coordinator
+        let coordinator = TodayCoordinator()
+        coordinator.viewController = controller
+
+        // ViewModel
+        let viewModel = TodayViewModel(useCase: useCase, coordinator: coordinator)
+        controller.viewModel = viewModel
+
+        //
+        let navigationController = NavigationController(rootViewController: controller)
+        navigationController.tabBarItem = UITabBarItem(title: App.String.today,
+                                                       image: App.Image.today,
+                                                       tag: 0)
+        return navigationController
+    }
+
+    // Magic here
+}
+```
+
+#### Service
+
+The **Service** is a concrete implementation of **Model** in a specific service. It does hide all implementation details. For example, database implementation whether it is Realm, CoreData, etc.
+
+Because of framework requirements (e.g. Realm, CoreData), we can't use `Model's Entity` to implement
+
+```swift
+final class RTask: Object {
+    @objc dynamic var id: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var startAt: Date = Date()
+    @objc dynamic var createdAt: Date = Date()
+    @objc dynamic var updatedAt: Date = Date()
+    @objc dynamic var isFinish: Bool = false
+}
+```
+
+The `Service` also contains concrete implementations of `Model's UseCase`, `Repositories` or `Any Services` that are defined in `Model`.
+
+```swift
+final class RealmTask<R: Repository>: TaskUseCase where R.Entity == Task {
+    private let repository: R
+
+    init(repository: R) {
+        self.repository = repository
+    }
+
+    func add(_ task: Task) -> Observable<Task> {
+        return repository.save(task)
+    }
+
+    func update(_ task: Task) -> Observable<Task> {
+        return repository.save(task)
+    }
+
+    // Another magic here
+}
+```
+
 ## Example
 
 The example application will show how I implemented Clean Architecture with MVVM-C
+The example application is `Task Todo App` which uses `Realm` and `Network` as a proof of concept that the `Application` is not dependant on the `Service` implementation detail.
 
 <table>
   <tr>
-    <td><img src='./screenshots/today_tasks_framed.png' /></td>
-    <td><img src='./screenshots/settings_framed.png' /></td>
-    <td><img src='./screenshots/add_task_framed.png' /></td>
+    <td><img src='./img/today_tasks_framed.png' /></td>
+    <td><img src='./img/settings_framed.png' /></td>
+    <td><img src='./img/add_task_framed.png' /></td>
   </tr>
 </table>
 
