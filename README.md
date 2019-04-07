@@ -3,17 +3,17 @@
 
 This project contains documents and example of clean architecture of iOS application based on **MVVM-C** and **RxSwift**
 
-- [ios-clean-architecture](#ios-clean-architecture)
-  - [MVVM-Coordinator and Clean Architecture](#mvvm-coordinator-and-clean-architecture)
-    - [Overview](#overview)
-  - [Example](#example)
-    - [Prerequisites](#prerequisites)
-    - [Installing](#installing)
-  - [Contributing](#contributing)
-  - [Versioning](#versioning)
-  - [Authors](#authors)
-  - [License](#license)
-  - [Acknowledgments](#acknowledgments)
+**Table of Contents**
+- [MVVM-Coordinator and Clean Architecture](#mvvm-coordinator-and-clean-architecture)
+  - [Overview](#overview)
+- [Example](#example)
+  - [Prerequisites](#prerequisites)
+  - [Installing](#installing)
+- [Contributing](#contributing)
+- [Versioning](#versioning)
+- [Authors](#authors)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## MVVM-Coordinator and Clean Architecture
 
