@@ -11,13 +11,13 @@ import Foundation
 final class Info {
     let name: String
     let author: String
-    let url: String
+    let repo: String
     let year: Int
 
-    init(name: String, author: String, url: String, year: Int) {
+    init(name: String, author: String, repo: String, year: Int) {
         self.name = name
         self.author = author
-        self.url = url
+        self.repo = repo
         self.year = year
     }
 }
@@ -27,7 +27,7 @@ extension Info: Codable {
     private enum CodingKeys: String, CodingKey {
         case name
         case author
-        case url
+        case repo
         case year
     }
 }

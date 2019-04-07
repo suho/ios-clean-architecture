@@ -22,6 +22,8 @@ protocol ColorPackage {
     var taskCellDoneButton: UIColor { get }
     var taskCellTickImage: UIColor { get }
     var taskCellCoverView: UIColor { get }
+    var detailCellBackground: UIColor { get }
+    var detailCellText: UIColor { get }
 }
 
 // MARK: - App Theme
@@ -56,5 +58,7 @@ extension App {
         var taskCellDoneButton: UIColor = UIColor(hex: 0x919093)
         var taskCellTickImage: UIColor = UIColor(hex: 0x201f25)
         var taskCellCoverView: UIColor = UIColor(hex: 0x000000, transparency: 0.6)
+        var detailCellBackground: UIColor = UIColor(hex: 0x171717)
+        var detailCellText: UIColor = UIColor(hex: 0xffffff)
     }
 }

@@ -41,8 +41,15 @@ final class TabBarCoordinator: Coordinate {
 
     private func settingsNavi() -> UINavigationController {
         let controller = SettingsViewController()
+        let router = Router<InfoTarget>()
+        let useCase = InfoNetwork(router: router)
+        let coordinator = SettingsCoordinator()
+        let viewModel = SettingsViewModel(useCase: useCase, coordinator: coordinator)
+        controller.viewModel = viewModel
         let navigationController = NavigationController(rootViewController: controller)
-        navigationController.tabBarItem = UITabBarItem(title: App.String.settings, image: App.Image.settings, tag: 2)
+        navigationController.tabBarItem = UITabBarItem(title: App.String.settings,
+                                                       image: App.Image.settings,
+                                                       tag: 1)
         return navigationController
     }
 }

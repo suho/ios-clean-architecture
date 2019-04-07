@@ -12,5 +12,9 @@ extension App {
         static let today = "Today"
         static let settings = "Settings"
         static let ok = "OK"
+        static let name = "Name"
+        static let author = "Author"
+        static let repo = "Repository"
+        static let year = "Year"
     }
 }

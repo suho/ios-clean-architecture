@@ -22,7 +22,7 @@ extension InfoTarget: TargetType {
     var path: String {
         switch self {
         case .about:
-            return "about.json"
+            return "/about.json"
         }
     }
 

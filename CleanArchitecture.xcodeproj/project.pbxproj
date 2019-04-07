@@ -19,6 +19,9 @@
 		4310635E21EDB38F0088BB14 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310635D21EDB38F0088BB14 /* Date.swift */; };
 		4310636221EDB8CC0088BB14 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310636021EDB8CC0088BB14 /* TabBarController.swift */; };
 		4310636521EDBCF90088BB14 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310636421EDBCF90088BB14 /* UIColor.swift */; };
+		431B24AE2259CE5B00AD5C1C /* DetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B24AD2259CE5B00AD5C1C /* DetailCellViewModel.swift */; };
+		431B24B32259D56E00AD5C1C /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B24B12259D56E00AD5C1C /* DetailCell.swift */; };
+		431B24B42259D56E00AD5C1C /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431B24B22259D56E00AD5C1C /* DetailCell.xib */; };
 		433BCADC21C7F0000098DCF8 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD721C7F0000098DCF8 /* TargetType.swift */; };
 		433BCADD21C7F0000098DCF8 /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD821C7F0000098DCF8 /* Mapping.swift */; };
 		433BCADE21C7F0000098DCF8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433BCAD921C7F0000098DCF8 /* Router.swift */; };
@@ -101,6 +104,9 @@
 		4310635D21EDB38F0088BB14 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		4310636021EDB8CC0088BB14 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4310636421EDBCF90088BB14 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		431B24AD2259CE5B00AD5C1C /* DetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCellViewModel.swift; sourceTree = "<group>"; };
+		431B24B12259D56E00AD5C1C /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		431B24B22259D56E00AD5C1C /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		433BCAD721C7F0000098DCF8 /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		433BCAD821C7F0000098DCF8 /* Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapping.swift; sourceTree = "<group>"; };
 		433BCAD921C7F0000098DCF8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -236,6 +242,16 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		431B24AC2259CE4500AD5C1C /* DetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				431B24B12259D56E00AD5C1C /* DetailCell.swift */,
+				431B24B22259D56E00AD5C1C /* DetailCell.xib */,
+				431B24AD2259CE5B00AD5C1C /* DetailCellViewModel.swift */,
+			);
+			path = DetailCell;
+			sourceTree = "<group>";
+		};
 		433BCAD421C7EDF60098DCF8 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +352,7 @@
 		435A7FD721F0082B0014D01F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				431B24AC2259CE4500AD5C1C /* DetailCell */,
 				435A7FDA21F008AC0014D01F /* TaskCell */,
 			);
 			path = Cell;
@@ -663,6 +680,7 @@
 				4353C68521C6A3F200A824DD /* Assets.xcassets in Resources */,
 				435A7FB821EF78930014D01F /* TodayViewController.xib in Resources */,
 				43EB31652204B45100555451 /* AddTaskViewController.xib in Resources */,
+				431B24B42259D56E00AD5C1C /* DetailCell.xib in Resources */,
 				435A7FDE21F008C50014D01F /* TaskCell.xib in Resources */,
 				435A7FC021EF78AE0014D01F /* SettingsViewController.xib in Resources */,
 			);
@@ -841,6 +859,7 @@
 				4307934121C9D80D003C5BF0 /* RxError.swift in Sources */,
 				435A7FD421EF92C20014D01F /* SettingsViewModel.swift in Sources */,
 				435A7FCB21EF8FEF0014D01F /* TodayViewModel.swift in Sources */,
+				431B24AE2259CE5B00AD5C1C /* DetailCellViewModel.swift in Sources */,
 				4310635821ED9E940088BB14 /* TaskUseCase.swift in Sources */,
 				4310636221EDB8CC0088BB14 /* TabBarController.swift in Sources */,
 				43FCC4ED2257CE63009B2375 /* SettingsCoordinator.swift in Sources */,
@@ -872,6 +891,7 @@
 				43FCC4EB2257CD24009B2375 /* InfoNetwork.swift in Sources */,
 				4310635421ED9A6B0088BB14 /* Task.swift in Sources */,
 				435A7FC221EF7A770014D01F /* TabBarViewModel.swift in Sources */,
+				431B24B32259D56E00AD5C1C /* DetailCell.swift in Sources */,
 				433BCAED21C7F2CB0098DCF8 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
