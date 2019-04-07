@@ -5,6 +5,7 @@ This project contains documents and example of clean architecture of iOS applica
 
 - [ios-clean-architecture](#ios-clean-architecture)
   - [MVVM-Coordinator and Clean Architecture](#mvvm-coordinator-and-clean-architecture)
+    - [Overview](#overview)
   - [Example](#example)
     - [Prerequisites](#prerequisites)
     - [Installing](#installing)
@@ -16,7 +17,9 @@ This project contains documents and example of clean architecture of iOS applica
 
 ## MVVM-Coordinator and Clean Architecture
 
+### Overview
 
+![Clean Architecture][image-4]
 
 ## Example
 
@@ -80,7 +83,7 @@ For the versions available, see the [release on this repository][releases].
 
 ## Authors
 
-* **Su Ho** - *Initial work* - [suho][suho]
+* [@suho][suho]
 
 See also the list of [contributors][contributors] who participated in this project.
 
@@ -103,9 +106,10 @@ This project is licensed under the MIT License - see the [LICENSE.md][license] f
 [fastlane]: https://fastlane.tools/
 [sergdort]: https://github.com/sergdort
 [rxswift]: https://github.com/ReactiveX/RxSwift
-[image-1]: ./screenshots/add_task_framed.png
-[image-2]: ./screenshots/settings_framed.png
-[image-3]: ./screenshots/today_tasks_framed.png
+[image-1]: ./img/add_task_framed.png
+[image-2]: ./img/settings_framed.png
+[image-3]: ./img/today_tasks_framed.png
 [travis-img]: https://travis-ci.org/suho/ios-clean-architecture.svg?branch=master
 [travis-url]: https://travis-ci.org/suho/ios-clean-architecture
+[image-4]: ./img/architecture.jpg
 
