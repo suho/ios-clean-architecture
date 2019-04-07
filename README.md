@@ -22,7 +22,13 @@ This project contains documents and example of clean architecture of iOS applica
 
 The example application will show how I implemented Clean Architecture with MVVM-C
 
-![image-1] | ![image-2] | ![image-3]
+<table>
+  <tr>
+    <td>![image-1]</td>
+    <td>![image-2]</td>
+    <td>![image-3]</td>
+  </tr>
+</table>
 
 ### Prerequisites
 
