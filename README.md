@@ -115,7 +115,6 @@ final class TodayViewModel: ViewModel {
     var coordinator: TodayCoordinator?
     private let useCase: TaskUseCase
 
-    // Inject Model (UseCase) here
     init(useCase: TaskUseCase, coordinator: TodayCoordinator) {
         self.useCase = useCase
         self.coordinator = coordinator
@@ -138,7 +137,7 @@ final class TabBarCoordinator: Coordinate {
         // View
         let controller = TodayViewController()
 
-        // Implement UseCase
+        // Init UseCase for inject into ViewModel
         let repository = RealmRepository<Task>()
         let useCase = RealmTask(repository: repository)
 
