@@ -102,3 +102,6 @@ This project is licensed under the MIT License - see the [LICENSE.md][license] f
 [image-1]: ./screenshots/add_task_framed.png
 [image-2]: ./screenshots/settings_framed.png
 [image-3]: ./screenshots/today_tasks_framed.png
+[travis-img]: https://travis-ci.org/suho/ios-clean-architecture.svg?branch=master
+[travis-url]: https://travis-ci.org/suho/ios-clean-architecture
+
