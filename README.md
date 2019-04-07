@@ -24,9 +24,9 @@ The example application will show how I implemented Clean Architecture with MVVM
 
 <table>
   <tr>
-    <td>![image-1]</td>
-    <td>![image-2]</td>
-    <td>![image-3]</td>
+    <td><img src='./screenshots/today_tasks_framed.png' /></td>
+    <td><img src='./screenshots/settings_framed.png' /></td>
+    <td><img src='./screenshots/add_task_framed.png' /></td>
   </tr>
 </table>
 
@@ -63,8 +63,6 @@ bundle exec pod install
 ```
 
 Now, run your project with Xcode and see the demo app
-
-// demo image or video here
 
 ## Contributing
 
