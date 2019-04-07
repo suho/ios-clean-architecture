@@ -24,12 +24,15 @@ final class AddTaskViewController: ViewController {
         setupBackground()
         setupNavi()
         setupTimePicker()
-        setupTextField()
     }
 
     override func bindViewModel() {
         super.bindViewModel()
-        let save = saveButton.rx.tap.asDriver()
+        let save = saveButton.rx.tap
+            .do(onNext: { _ in
+                self.view.endEditing(true)
+            })
+            .emptyDriverIfError()
         let cancel = cancelButton.rx.tap.asDriver()
         let time = timePicker.rx.date.asDriver()
         let name = nameTextField.rx.text.orEmpty.asDriver()
@@ -37,6 +40,13 @@ final class AddTaskViewController: ViewController {
         let output = viewModel.transform(input: input)
         output.cancel.drive().disposed(by: bag)
         output.save.drive().disposed(by: bag)
+        nameTextField.rx.controlEvent(.editingDidEndOnExit)
+            .do(onNext: { _ in
+                self.view.endEditing(true)
+            })
+            .emptyDriverIfError()
+            .drive()
+            .disposed(by: bag)
     }
 }
 
@@ -61,17 +71,5 @@ extension AddTaskViewController {
     private func setupTimePicker() {
         timePicker.minimumDate = Date()
         timePicker.setValue(UIColor.white, forKey: "textColor")
-    }
-
-    private func setupTextField() {
-        nameTextField.delegate = self
-    }
-}
-
-// MARK: - UITextFieldDelegate
-extension AddTaskViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        view.endEditing(true)
-        return true
     }
 }

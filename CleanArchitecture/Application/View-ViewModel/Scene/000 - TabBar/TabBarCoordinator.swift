@@ -44,6 +44,7 @@ final class TabBarCoordinator: Coordinate {
         let router = Router<InfoTarget>()
         let useCase = InfoNetwork(router: router)
         let coordinator = SettingsCoordinator()
+        coordinator.viewController = controller
         let viewModel = SettingsViewModel(useCase: useCase, coordinator: coordinator)
         controller.viewModel = viewModel
         let navigationController = NavigationController(rootViewController: controller)

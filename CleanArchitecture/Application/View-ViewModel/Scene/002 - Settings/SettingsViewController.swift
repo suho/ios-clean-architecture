@@ -29,6 +29,8 @@ final class SettingsViewController: ViewController, View {
         output.viewModels.drive(tableView.rx.items(cellIdentifier: DetailCell.identify, cellType: DetailCell.self)) { (_, viewModel, cell) in
             cell.viewModel = viewModel
         }.disposed(by: bag)
+        output.indicator.drive().disposed(by: bag)
+        output.error.drive().disposed(by: bag)
     }
 }
 
