@@ -209,9 +209,9 @@ The example application is `Task Todo App` which uses `Realm` and `Network` as a
 
 <table>
   <tr>
-    <td><img src='./img/today_tasks_framed.png' /></td>
-    <td><img src='./img/settings_framed.png' /></td>
-    <td><img src='./img/add_task_framed.png' /></td>
+    <td><img src='./img/ios/today_tasks_framed.png' /></td>
+    <td><img src='./img/ios/settings_framed.png' /></td>
+    <td><img src='./img/ios/add_task_framed.png' /></td>
   </tr>
 </table>
 
@@ -288,9 +288,9 @@ This project is licensed under the MIT License - see the [LICENSE.md][license] f
 [fastlane]: https://fastlane.tools/
 [sergdort]: https://github.com/sergdort
 [rxswift]: https://github.com/ReactiveX/RxSwift
-[image-1]: ./img/add_task_framed.png
-[image-2]: ./img/settings_framed.png
-[image-3]: ./img/today_tasks_framed.png
+[image-1]: ./img/ios/add_task_framed.png
+[image-2]: ./img/ios/settings_framed.png
+[image-3]: ./img/ios/today_tasks_framed.png
 [travis-img]: https://travis-ci.org/suho/ios-clean-architecture.svg?branch=master
 [travis-url]: https://travis-ci.org/suho/ios-clean-architecture
 [image-4]: ./img/architecture.jpg
