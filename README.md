@@ -166,7 +166,7 @@ final class TabBarCoordinator: Coordinate {
 
 The **Service** is a concrete implementation of **Model** in a specific service. It does hide all implementation details. For example, database implementation whether it is Realm, CoreData, etc.
 
-Because of framework requirements (e.g. Realm, CoreData), we can't use `Model's Entity` to implement
+Sometime, because of framework requirements (e.g. Realm, CoreData), we can't use `Model's Entity` to implement
 
 ```swift
 final class RTask: Object {
@@ -200,6 +200,8 @@ final class RealmTask<R: Repository>: TaskUseCase where R.Entity == Task {
     // Another magic here
 }
 ```
+
+After finish implement the `Service`, we will inject `Service`~`UseCase`(Model) into `ViewModel` by `Coordinator`
 
 ## Example
 
