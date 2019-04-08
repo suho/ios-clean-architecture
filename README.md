@@ -6,6 +6,8 @@ This project contains documents and example of clean architecture of iOS applica
 **Table of Contents**
 - [MVVM-Coordinator and Clean Architecture](#mvvm-coordinator-and-clean-architecture)
   - [Overview](#overview)
+  - [Application](#application)
+  - [Service](#service)
 - [Example](#example)
   - [Prerequisites](#prerequisites)
   - [Installing](#installing)
@@ -21,7 +23,7 @@ This project contains documents and example of clean architecture of iOS applica
 
 ![Clean Architecture][image-4]
 
-#### Application
+### Application
 
 **Application** is responsible for delivering information to the user and handling user input. This application implemented with MVVM-C. This is place for your **View**s, **ViewModel**s, **Model**s and **Coordinator**s.
 
@@ -161,7 +163,7 @@ final class TabBarCoordinator: Coordinate {
 }
 ```
 
-#### Service
+### Service
 
 The **Service** is a concrete implementation of **Model** in a specific service. It does hide all implementation details. For example, database implementation whether it is Realm, CoreData, etc.
 
