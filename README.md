@@ -128,6 +128,8 @@ final class TodayViewModel: ViewModel {
 }
 ```
 
+As I mentioned above, we will implement injections for models, viewmodels, views in `Coordinator`
+
 ```swift
 final class TabBarCoordinator: Coordinate {
 
